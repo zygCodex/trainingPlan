@@ -1,0 +1,746 @@
+{
+  "warmups": [
+    {
+      "id": "W001",
+      "name": "弹力带水平开合与环绕",
+      "instructions": "向两端、远端拉开并环绕，保持恒定张力；肩日使用小幅环绕。原文强调避免主动向后缩肩胛挤压。",
+      "muscles": "肩带（原文未逐项列出肌肉）",
+      "days": "Day 1 胸；Day 4 肩",
+      "notes": "",
+      "source": "合并胸日与肩日的同类弹力带热身。",
+      "equipment": "—",
+      "alternatives": []
+    },
+    {
+      "id": "W002",
+      "name": "折刀式俯卧撑／脚抬高推起",
+      "instructions": "臀部向后上方抬起，身体沿斜线推起。",
+      "muscles": "前锯肌；肋间肌；胸廓稳定",
+      "days": "Day 1 胸",
+      "notes": "",
+      "source": "原文以两个名称并列描述，具体支撑方式未进一步展开。",
+      "equipment": "—",
+      "alternatives": []
+    },
+    {
+      "id": "W003",
+      "name": "跪姿肘屈伸",
+      "instructions": "跪姿下保持肩胛撑起、不塌陷，向后推时配合深吸气。",
+      "muscles": "前锯肌；背部外沿",
+      "days": "Day 2 背",
+      "notes": "",
+      "source": "原文背日专属热身。",
+      "equipment": "—",
+      "alternatives": []
+    },
+    {
+      "id": "W004",
+      "name": "墙面肘部对抗拉伸",
+      "instructions": "手肘抵墙，身体向同侧旋转；拉伸时主动发力对抗墙面。",
+      "muscles": "大圆肌；背阔肌；肩胛区域",
+      "days": "Day 2 背",
+      "notes": "",
+      "source": "原文强调肩胛前引与张力感知。",
+      "equipment": "—",
+      "alternatives": []
+    },
+    {
+      "id": "W005",
+      "name": "伟大者伸展",
+      "instructions": "配合深吸气，向上旋转胸椎。",
+      "muscles": "髋屈肌；前腿后侧；胸椎区域",
+      "days": "Day 3 腿",
+      "notes": "",
+      "source": "原文未完整描述起始姿势。",
+      "equipment": "—",
+      "alternatives": []
+    },
+    {
+      "id": "W006",
+      "name": "髋内收肌主动对抗牵拉",
+      "instructions": "保持静力伸展并主动对抗，不做弹震。",
+      "muscles": "髋内收肌群",
+      "days": "Day 3 腿",
+      "notes": "",
+      "source": "原文未完整描述起始姿势。",
+      "equipment": "—",
+      "alternatives": []
+    },
+    {
+      "id": "W007",
+      "name": "俯卧斜凳 Y 抬与前后推",
+      "instructions": "俯卧斜凳，拇指朝上，做 Y 抬及前后推；头向后收，注意下斜方肌控制。",
+      "muscles": "下斜方肌；肩胛区域",
+      "days": "Day 4 肩",
+      "notes": "",
+      "source": "原文将 Y 抬与前后推作为一条热身组合描述。",
+      "equipment": "—",
+      "alternatives": []
+    }
+  ],
+  "exercises": [
+    {
+      "id": "E001",
+      "name": "龙门架绳索夹胸",
+      "equipment": "龙门架；绳索把手",
+      "muscles": "胸大肌，原文侧重下外沿",
+      "instructions": "站在滑轮垂直位置略偏内侧，不站得过于靠前；保持挺胸，双手沿弧线夹向腹股沟方向；下放时维持胸廓姿态，不含胸。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 1。"
+    },
+    {
+      "id": "E002",
+      "name": "平板杠铃卧推",
+      "equipment": "杠铃；平板卧推凳；卧推架",
+      "muscles": "胸大肌；肱三头肌参与",
+      "instructions": "下放到底时小臂垂直地面；原文描述出架后杠铃位于眼鼻中线上方，再下落触胸；肘向躯干微收，大臂约45°～60°；全握杠铃，注意虎口侧抓握；臀部贴凳，避免极端起桥；不适时不盲目追求行程。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 1。原文按肋骨开角讨论收肋／自然开肋，并提出左倾时的单腿抬起纠正建议；均属个体化提示，未作为默认执行步骤。"
+    },
+    {
+      "id": "E003",
+      "name": "器械上斜卧推",
+      "equipment": "上斜推胸器械",
+      "muscles": "锁骨头；中上胸",
+      "instructions": "推起时主动维持背部贴靠背，抑制肋骨上翻，保持中上胸张力。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 1。"
+    },
+    {
+      "id": "E004",
+      "name": "站姿杠铃实力推",
+      "equipment": "杠铃；杠铃架",
+      "muscles": "肩部；肱三头肌参与",
+      "instructions": "原文以银环附近作为握距参考；起始杠铃位于上胸，推起时不塌腕、不后仰顶腰；胸日描述下放至鼻与嘴唇之间，慢下快推；肩日强调腹内压与核心稳定。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 1 辅助项、Day 4 主项，共用动作 ID；当天强调点见计划备注。握距参考依杠铃规格而异。"
+    },
+    {
+      "id": "E005",
+      "name": "颈后绳索臂屈伸",
+      "equipment": "龙门架低位滑轮；绳索",
+      "muscles": "肱三头肌长头",
+      "instructions": "滑轮调低，手肘向内收并抬高；伸展时主动收缩三头，保持躯干稳定。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 1、Day 4 共用；肩日强调避免关节超伸锁死。"
+    },
+    {
+      "id": "E006",
+      "name": "直臂下压",
+      "equipment": "高位滑轮；下压把手",
+      "muscles": "背部上外沿；肩胛区域",
+      "instructions": "手腕微扣、肘抬起；原文强调肩胛上回旋与前引，不主动后缩夹背；下压约2/3行程，保持张力。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 2。虽有“激活”作用，原文列在正式动作中。"
+    },
+    {
+      "id": "E007",
+      "name": "上斜凳单手支撑哑铃划船",
+      "equipment": "上斜凳；哑铃",
+      "muscles": "背阔肌；背部厚度",
+      "instructions": "对侧手肘撑住斜凳，保持躯干中立；向下后方、髋部方向拉；避免大幅侧屈和旋转借力。",
+      "alternatives": [
+        "E023"
+      ],
+      "notes": "",
+      "source": "Day 2。原文“器械／哑铃划船”拆为两条可选形式。"
+    },
+    {
+      "id": "E008",
+      "name": "引体向上（屈髋位）",
+      "equipment": "单杠",
+      "muscles": "背阔肌上外沿；大圆肌；上背",
+      "instructions": "双腿置于身体前方，减少后倾和过度肩胛后缩；原文强调上回旋模式及虎口侧抓握。",
+      "alternatives": [
+        "E024"
+      ],
+      "notes": "",
+      "source": "Day 2。原文允许自重或器械辅助。"
+    },
+    {
+      "id": "E009",
+      "name": "窄握坐姿划船",
+      "equipment": "坐姿绳索划船器械；窄握把手",
+      "muscles": "背部肌腹",
+      "instructions": "双腿微屈蹬实，稳定骨盆；身体微前倾、收下巴，向肚脐斜下方拉；以肩伸带动肩胛滑动，避免主动死夹背或耸肩仰头。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 2。"
+    },
+    {
+      "id": "E010",
+      "name": "45°对握／斜握高位下拉",
+      "equipment": "高位下拉器械；对握／斜握把手",
+      "muscles": "背阔肌外沿",
+      "instructions": "躯干保持中立，垂直下拉至下巴高度；臀部坐稳、腿部固定，避免后仰变成划船。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 2。两种握法按原文保留为同一动作的握法选项。"
+    },
+    {
+      "id": "E011",
+      "name": "窄握杠铃弯举",
+      "equipment": "杠铃",
+      "muscles": "肱二头肌",
+      "instructions": "大臂保持微向前的肩屈位置；手腕微勾、不塌腕，注意外旋发力。",
+      "alternatives": [
+        "E025"
+      ],
+      "notes": "",
+      "source": "Day 2。原文“杠铃／钢线弯举”拆开。"
+    },
+    {
+      "id": "E012",
+      "name": "仰卧髋内收",
+      "equipment": "原文未说明具体阻力器械",
+      "muscles": "髋内收肌群；骨盆区域",
+      "instructions": "仰卧位做内收，夹紧时腰部贴实、不反弓，收紧骨盆。",
+      "alternatives": [
+        "E013",
+        "E014"
+      ],
+      "notes": "",
+      "source": "Day 3 可选形式之一；原文未展开阻力设置。"
+    },
+    {
+      "id": "E013",
+      "name": "器械髋内收",
+      "equipment": "髋内收器械",
+      "muscles": "髋内收肌群",
+      "instructions": "原文列出器械形式，但未单独给出座椅、靠背及行程设置。",
+      "alternatives": [
+        "E012",
+        "E014"
+      ],
+      "notes": "",
+      "source": "Day 3 可选形式之一，不直接套用仰卧位的全部操作。"
+    },
+    {
+      "id": "E014",
+      "name": "哥本哈根支撑",
+      "equipment": "训练凳",
+      "muscles": "髋内收肌群；躯干稳定",
+      "instructions": "小腿搭凳，躯干保持一条直线，不屈髋。",
+      "alternatives": [
+        "E012",
+        "E013"
+      ],
+      "notes": "",
+      "source": "Day 3 可选形式之一；原文未明确静态保持时间或动态计次方式，不能直接把15～20次换算成秒。"
+    },
+    {
+      "id": "E015",
+      "name": "单腿哑铃硬拉",
+      "equipment": "哑铃；立柱（可选辅助）",
+      "muscles": "单侧后链",
+      "instructions": "平视前方、不仰头；骨盆保持水平，髋向后折叠；初学者可扶立柱。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 3。原文另述屈髋位单手划船预激活技巧，未给完整剂量，不另增必做计划项。"
+    },
+    {
+      "id": "E016",
+      "name": "后撤式弓步蹲（后腿发力提示）",
+      "equipment": "原文未明确负重器械",
+      "muscles": "后侧链；臀部",
+      "instructions": "向后迈步下蹲；原文特别强调起身时后腿主动伸直发力。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 3。保留该教程特定提示，不改写为其他弓步蹲版本。"
+    },
+    {
+      "id": "E017",
+      "name": "负重旋转弓步蹲",
+      "equipment": "杠铃片",
+      "muscles": "下肢；骨盆旋转控制；躯干稳定",
+      "instructions": "双手抱杠铃片；下蹲时躯干转向支撑腿一侧，回正时向斜上方推起。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 3。"
+    },
+    {
+      "id": "E018",
+      "name": "站姿提踵",
+      "equipment": "原文未明确负重器械",
+      "muscles": "小腿；足踝区域",
+      "instructions": "前脚掌大拇指球及脚趾抓地；下放时前掌不翘起；重心直上直下，避免前后晃动。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 3。"
+    },
+    {
+      "id": "E019",
+      "name": "坐姿器械反飞鸟",
+      "equipment": "反飞鸟器械",
+      "muscles": "三角肌后束",
+      "instructions": "手与肩齐平或略低，手肘微抬；向外延伸拉开，离心回放不触底；胸贴靠垫，不后仰。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 4。"
+    },
+    {
+      "id": "E020",
+      "name": "仰卧绳索面拉",
+      "equipment": "龙门架；绳索；泡沫砖",
+      "muscles": "肩部，原文归为前中束",
+      "instructions": "仰卧，头垫泡沫砖、下巴微收；拉向额头上方，肘向斜上方展开；采用动作中段行程维持张力。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 4。肌肉归类沿用原文表述，未独立核实。"
+    },
+    {
+      "id": "E021",
+      "name": "哑铃对握前平举",
+      "equipment": "哑铃",
+      "muscles": "三角肌前束；胸廓协同",
+      "instructions": "掌心相对；下放维持挺胸与胸廓姿态，大腿后侧发力稳定骨盆；动作连贯。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 4。"
+    },
+    {
+      "id": "E022",
+      "name": "俯身绳索二头弯举",
+      "equipment": "龙门架低位滑轮",
+      "muscles": "肱二头肌",
+      "instructions": "原文描述大臂放于膝盖，外旋收紧；避免关节超伸锁死。",
+      "alternatives": [],
+      "notes": "",
+      "source": "Day 4，与E005构成超级组；原文未明确具体把手。"
+    },
+    {
+      "id": "E023",
+      "name": "上斜凳单手支撑器械划船",
+      "equipment": "上斜凳；划船器械（具体形式未说明）",
+      "muscles": "背阔肌；背部厚度",
+      "instructions": "同类支撑提示为对侧肘撑凳、躯干中立、拉向髋部；具体器械设置原文未说明。",
+      "alternatives": [
+        "E007"
+      ],
+      "notes": "",
+      "source": "E007的原文可选形式。"
+    },
+    {
+      "id": "E024",
+      "name": "器械辅助引体向上",
+      "equipment": "辅助引体器械",
+      "muscles": "背阔肌上外沿；大圆肌；上背",
+      "instructions": "通过器械辅助完成引体；尽可能维持原文的躯干与抓握控制，腿位需结合器械结构确认。",
+      "alternatives": [
+        "E008"
+      ],
+      "notes": "",
+      "source": "E008的原文退阶形式；不强行要求器械不支持的腿位。"
+    },
+    {
+      "id": "E025",
+      "name": "窄握绳索弯举",
+      "equipment": "低位滑轮；窄握把手",
+      "muscles": "肱二头肌",
+      "instructions": "大臂微向前，手腕微勾、不塌腕，注意外旋发力。",
+      "alternatives": [
+        "E011"
+      ],
+      "notes": "",
+      "source": "原文“钢线弯举”按绳索形式整理。"
+    }
+  ],
+  "plan": [
+    {
+      "id": "P001",
+      "dayLabel": "Day 1 胸",
+      "order": 1,
+      "actionId": "W001",
+      "name": "弹力带水平开合与环绕",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "保持恒定张力。",
+      "day": 1
+    },
+    {
+      "id": "P002",
+      "dayLabel": "Day 1 胸",
+      "order": 2,
+      "actionId": "W002",
+      "name": "折刀式俯卧撑／脚抬高推起",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "前锯肌与胸廓激活。",
+      "day": 1
+    },
+    {
+      "id": "P003",
+      "dayLabel": "Day 1 胸",
+      "order": 3,
+      "actionId": "E001",
+      "name": "龙门架绳索夹胸",
+      "stage": "正式训练",
+      "dose": "1组适应+3组正式×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "适应组次数未单独说明。",
+      "day": 1
+    },
+    {
+      "id": "P004",
+      "dayLabel": "Day 1 胸",
+      "order": 4,
+      "actionId": "E002",
+      "name": "平板杠铃卧推",
+      "stage": "正式训练",
+      "dose": "1组热身+5组正式×8～10次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "热身组次数未单独说明；后程自然衰减至8次即可，原文不强制减重。",
+      "day": 1
+    },
+    {
+      "id": "P005",
+      "dayLabel": "Day 1 胸",
+      "order": 5,
+      "actionId": "E003",
+      "name": "器械上斜卧推",
+      "stage": "正式训练",
+      "dose": "1组适应+3组正式×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "适应组次数未单独说明。",
+      "day": 1
+    },
+    {
+      "id": "P006",
+      "dayLabel": "Day 1 胸",
+      "order": 6,
+      "actionId": "E004",
+      "name": "站姿杠铃实力推",
+      "stage": "正式训练",
+      "dose": "1组适应+3组正式×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "辅助项；适应组次数未单独说明；原文提示慢下快推。",
+      "day": 1
+    },
+    {
+      "id": "P007",
+      "dayLabel": "Day 1 胸",
+      "order": 7,
+      "actionId": "E005",
+      "name": "颈后绳索臂屈伸",
+      "stage": "正式训练",
+      "dose": "3～4组×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "肱三头肌长头。",
+      "day": 1
+    },
+    {
+      "id": "P008",
+      "dayLabel": "Day 2 背",
+      "order": 1,
+      "actionId": "W003",
+      "name": "跪姿肘屈伸",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "肩胛撑起，配合深吸气。",
+      "day": 2
+    },
+    {
+      "id": "P009",
+      "dayLabel": "Day 2 背",
+      "order": 2,
+      "actionId": "W004",
+      "name": "墙面肘部对抗拉伸",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "原文描述单侧操作，但未明确双侧剂量。",
+      "day": 2
+    },
+    {
+      "id": "P010",
+      "dayLabel": "Day 2 背",
+      "order": 3,
+      "actionId": "E006",
+      "name": "直臂下压",
+      "stage": "正式训练",
+      "dose": "4组×12～15次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "按原文归入正式训练。",
+      "day": 2
+    },
+    {
+      "id": "P011",
+      "dayLabel": "Day 2 背",
+      "order": 4,
+      "actionId": "E007",
+      "name": "上斜凳单手支撑哑铃划船",
+      "stage": "正式训练",
+      "dose": "4组×12次",
+      "side": "每侧",
+      "superset": "—",
+      "remark": "原文也允许E023器械形式。",
+      "day": 2
+    },
+    {
+      "id": "P012",
+      "dayLabel": "Day 2 背",
+      "order": 5,
+      "actionId": "E008",
+      "name": "引体向上（屈髋位）",
+      "stage": "正式训练",
+      "dose": "4组×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "可使用E024器械辅助形式。",
+      "day": 2
+    },
+    {
+      "id": "P013",
+      "dayLabel": "Day 2 背",
+      "order": 6,
+      "actionId": "E009",
+      "name": "窄握坐姿划船",
+      "stage": "正式训练",
+      "dose": "4组×12～15次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "稳定骨盆，避免主动死夹背。",
+      "day": 2
+    },
+    {
+      "id": "P014",
+      "dayLabel": "Day 2 背",
+      "order": 7,
+      "actionId": "E010",
+      "name": "45°对握／斜握高位下拉",
+      "stage": "正式训练",
+      "dose": "4组×12～15次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "避免后仰变成划船。",
+      "day": 2
+    },
+    {
+      "id": "P015",
+      "dayLabel": "Day 2 背",
+      "order": 8,
+      "actionId": "E011",
+      "name": "窄握杠铃弯举",
+      "stage": "正式训练",
+      "dose": "4组×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "原文也允许E025绳索形式。",
+      "day": 2
+    },
+    {
+      "id": "P016",
+      "dayLabel": "Day 3 腿",
+      "order": 1,
+      "actionId": "W005",
+      "name": "伟大者伸展",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "原文未说明每侧次数／时长。",
+      "day": 3
+    },
+    {
+      "id": "P017",
+      "dayLabel": "Day 3 腿",
+      "order": 2,
+      "actionId": "W006",
+      "name": "髋内收肌主动对抗牵拉",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "静力伸展，不弹震。",
+      "day": 3
+    },
+    {
+      "id": "P018",
+      "dayLabel": "Day 3 腿",
+      "order": 3,
+      "actionId": "E012",
+      "name": "仰卧髋内收",
+      "stage": "正式训练",
+      "dose": "4组×15～20次",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "可选E013；原文也列出E014，但支撑的时长／动态方式需核实后另定，不直接套用本组次。",
+      "day": 3
+    },
+    {
+      "id": "P019",
+      "dayLabel": "Day 3 腿",
+      "order": 4,
+      "actionId": "E015",
+      "name": "单腿哑铃硬拉",
+      "stage": "正式训练",
+      "dose": "3组×12次",
+      "side": "每侧",
+      "superset": "—",
+      "remark": "可扶立柱辅助平衡。",
+      "day": 3
+    },
+    {
+      "id": "P020",
+      "dayLabel": "Day 3 腿",
+      "order": 5,
+      "actionId": "E016",
+      "name": "后撤式弓步蹲（后腿发力提示）",
+      "stage": "正式训练",
+      "dose": "3组×10～12次",
+      "side": "每侧",
+      "superset": "—",
+      "remark": "起身时后腿主动伸直为原文特定提示。",
+      "day": 3
+    },
+    {
+      "id": "P021",
+      "dayLabel": "Day 3 腿",
+      "order": 6,
+      "actionId": "E017",
+      "name": "负重旋转弓步蹲",
+      "stage": "正式训练",
+      "dose": "3组×10次",
+      "side": "每侧",
+      "superset": "—",
+      "remark": "下蹲向支撑腿侧旋转，回正时向斜上方推起。",
+      "day": 3
+    },
+    {
+      "id": "P022",
+      "dayLabel": "Day 3 腿",
+      "order": 7,
+      "actionId": "E018",
+      "name": "站姿提踵",
+      "stage": "正式训练",
+      "dose": "3～4组×15～20次",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "原文未明确单腿或双腿版本。",
+      "day": 3
+    },
+    {
+      "id": "P023",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 1,
+      "actionId": "W001",
+      "name": "弹力带水平开合与环绕",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "原文未说明",
+      "superset": "—",
+      "remark": "肩日强调小幅环绕。",
+      "day": 4
+    },
+    {
+      "id": "P024",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 2,
+      "actionId": "W007",
+      "name": "俯卧斜凳 Y 抬与前后推",
+      "stage": "热身",
+      "dose": "原文未说明",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "拇指朝上，注意下斜方肌控制。",
+      "day": 4
+    },
+    {
+      "id": "P025",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 3,
+      "actionId": "E019",
+      "name": "坐姿器械反飞鸟",
+      "stage": "正式训练",
+      "dose": "4组×12～15次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "离心回放不触底。",
+      "day": 4
+    },
+    {
+      "id": "P026",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 4,
+      "actionId": "E004",
+      "name": "站姿杠铃实力推",
+      "stage": "正式训练",
+      "dose": "5组×8～10次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "当天主项；原文建议使用腰带建立腹内压，强调核心稳定。未额外列出适应组。",
+      "day": 4
+    },
+    {
+      "id": "P027",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 5,
+      "actionId": "E020",
+      "name": "仰卧绳索面拉",
+      "stage": "正式训练",
+      "dose": "4组×10～15次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "头部垫泡沫砖，使用中段行程。",
+      "day": 4
+    },
+    {
+      "id": "P028",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 6,
+      "actionId": "E021",
+      "name": "哑铃对握前平举",
+      "stage": "正式训练",
+      "dose": "4组×10～12次",
+      "side": "双侧",
+      "superset": "—",
+      "remark": "保持骨盆与胸廓控制。",
+      "day": 4
+    },
+    {
+      "id": "P029",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 7,
+      "actionId": "E005",
+      "name": "颈后绳索臂屈伸",
+      "stage": "正式训练",
+      "dose": "4组×10～12次",
+      "side": "双侧",
+      "superset": "D4-A",
+      "remark": "与P030配对，每轮先三头再二头，交替完成4轮；原文未说明轮间休息。",
+      "day": 4
+    },
+    {
+      "id": "P030",
+      "dayLabel": "Day 4 肩与手臂",
+      "order": 8,
+      "actionId": "E022",
+      "name": "俯身绳索二头弯举",
+      "stage": "正式训练",
+      "dose": "4组×10～12次",
+      "side": "双侧",
+      "superset": "D4-A",
+      "remark": "与P029使用同一低位滑轮切换；两动作各4组。",
+      "day": 4
+    }
+  ]
+}
