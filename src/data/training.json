@@ -145,9 +145,7 @@
       "equipment": "上斜凳；哑铃",
       "muscles": "背阔肌；背部厚度",
       "instructions": "对侧手肘撑住斜凳，保持躯干中立；向下后方、髋部方向拉；避免大幅侧屈和旋转借力。",
-      "alternatives": [
-        "E023"
-      ],
+      "alternatives": ["E023"],
       "notes": "",
       "source": "Day 2。原文“器械／哑铃划船”拆为两条可选形式。"
     },
@@ -157,9 +155,7 @@
       "equipment": "单杠",
       "muscles": "背阔肌上外沿；大圆肌；上背",
       "instructions": "双腿置于身体前方，减少后倾和过度肩胛后缩；原文强调上回旋模式及虎口侧抓握。",
-      "alternatives": [
-        "E024"
-      ],
+      "alternatives": ["E024"],
       "notes": "",
       "source": "Day 2。原文允许自重或器械辅助。"
     },
@@ -189,9 +185,7 @@
       "equipment": "杠铃",
       "muscles": "肱二头肌",
       "instructions": "大臂保持微向前的肩屈位置；手腕微勾、不塌腕，注意外旋发力。",
-      "alternatives": [
-        "E025"
-      ],
+      "alternatives": ["E025"],
       "notes": "",
       "source": "Day 2。原文“杠铃／钢线弯举”拆开。"
     },
@@ -201,10 +195,7 @@
       "equipment": "原文未说明具体阻力器械",
       "muscles": "髋内收肌群；骨盆区域",
       "instructions": "仰卧位做内收，夹紧时腰部贴实、不反弓，收紧骨盆。",
-      "alternatives": [
-        "E013",
-        "E014"
-      ],
+      "alternatives": ["E013", "E014"],
       "notes": "",
       "source": "Day 3 可选形式之一；原文未展开阻力设置。"
     },
@@ -214,10 +205,7 @@
       "equipment": "髋内收器械",
       "muscles": "髋内收肌群",
       "instructions": "原文列出器械形式，但未单独给出座椅、靠背及行程设置。",
-      "alternatives": [
-        "E012",
-        "E014"
-      ],
+      "alternatives": ["E012", "E014"],
       "notes": "",
       "source": "Day 3 可选形式之一，不直接套用仰卧位的全部操作。"
     },
@@ -227,10 +215,7 @@
       "equipment": "训练凳",
       "muscles": "髋内收肌群；躯干稳定",
       "instructions": "小腿搭凳，躯干保持一条直线，不屈髋。",
-      "alternatives": [
-        "E012",
-        "E013"
-      ],
+      "alternatives": ["E012", "E013"],
       "notes": "",
       "source": "Day 3 可选形式之一；原文未明确静态保持时间或动态计次方式，不能直接把15～20次换算成秒。"
     },
@@ -320,9 +305,7 @@
       "equipment": "上斜凳；划船器械（具体形式未说明）",
       "muscles": "背阔肌；背部厚度",
       "instructions": "同类支撑提示为对侧肘撑凳、躯干中立、拉向髋部；具体器械设置原文未说明。",
-      "alternatives": [
-        "E007"
-      ],
+      "alternatives": ["E007"],
       "notes": "",
       "source": "E007的原文可选形式。"
     },
@@ -332,9 +315,7 @@
       "equipment": "辅助引体器械",
       "muscles": "背阔肌上外沿；大圆肌；上背",
       "instructions": "通过器械辅助完成引体；尽可能维持原文的躯干与抓握控制，腿位需结合器械结构确认。",
-      "alternatives": [
-        "E008"
-      ],
+      "alternatives": ["E008"],
       "notes": "",
       "source": "E008的原文退阶形式；不强行要求器械不支持的腿位。"
     },
@@ -344,9 +325,7 @@
       "equipment": "低位滑轮；窄握把手",
       "muscles": "肱二头肌",
       "instructions": "大臂微向前，手腕微勾、不塌腕，注意外旋发力。",
-      "alternatives": [
-        "E011"
-      ],
+      "alternatives": ["E011"],
       "notes": "",
       "source": "原文“钢线弯举”按绳索形式整理。"
     }
