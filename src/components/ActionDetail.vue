@@ -7,12 +7,7 @@ const original = computed(() =>
   props.item ? actions[props.item.actionId] : props.action,
 );
 const alternatives = computed(() =>
-  [
-    ...new Set([
-      ...(original.value.alternatives || []),
-      ...(props.action.alternatives || []),
-    ]),
-  ].filter((id) => id !== props.action.id && id !== original.value.id),
+  original.value.alternatives.filter((id) => id !== props.action.id),
 );
 </script>
 <template>
@@ -51,17 +46,17 @@ const alternatives = computed(() =>
       <div class="alternatives">
         <div v-for="id in alternatives" :key="id">
           <button
-            :disabled="!editable || id === 'E014'"
+            :disabled="!editable"
             class="alternative"
             @click="$emit('replace', id)"
           >
             <span>{{ actions[id].name }}</span
             ><span>{{
-              editable && id !== "E014" ? "替换 ↗" : "可选形式"
+              editable ? "替换 ↗" : "可选形式"
             }}</span>
           </button>
           <p v-if="id === 'E014'" class="muted small">
-            支撑时长与计量方式待核实，暂不直接替换。
+            原文未给支撑时长或组次，切换后会显示待确认。
           </p>
         </div>
       </div></template
@@ -76,7 +71,9 @@ const alternatives = computed(() =>
       <h4>✎ 个人心得</h4>
       <p>{{ action.notes || "暂无心得，留一点空间给自己的感受。" }}</p>
     </div>
-    <p v-if="item" class="small muted">计划备注：{{ item.remark }}</p>
+    <p v-if="item" class="small muted">
+      {{ action.id === original.id ? "计划备注" : "原动作的计划备注" }}：{{ item.remark }}
+    </p>
     <details class="source-note">
       <summary>来源备注</summary>
       <p>{{ action.source }}</p>

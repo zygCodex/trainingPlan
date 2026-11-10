@@ -7,14 +7,24 @@ const props = defineProps({ training: Object });
 const currentDay = computed(() =>
   days.find((d) => d.id === props.training.day.value),
 );
+const nextItem = computed(() =>
+  props.training.items.value.find(
+    (item) => !props.training.record.value.done[item.id],
+  ),
+);
 const sections = computed(() =>
   [
     { name: "热身激活", en: "WARM UP", stage: "热身" },
     { name: "正式训练", en: "WORKOUT", stage: "正式训练" },
-  ].map((s) => ({
-    ...s,
-    items: props.training.items.value.filter((p) => p.stage === s.stage),
-  })),
+  ].map((section) => {
+    const items = props.training.items.value.filter(
+      (item) => item.stage === section.stage,
+    );
+    const doneCount = items.filter(
+      (item) => props.training.record.value.done[item.id],
+    ).length;
+    return { ...section, items, doneCount };
+  }),
 );
 </script>
 <template>
@@ -98,12 +108,10 @@ const sections = computed(() =>
       <div v-for="s in sections" :key="s.stage" class="training-section">
         <div class="section-heading">
           <h3>
-            <span :class="{ orange: s.stage === '热身' }">{{
-              s.stage === "热身" ? "↗" : "↗"
-            }}</span
+            <span :class="{ orange: s.stage === '热身' }">↗</span
             >{{ s.name }} <small>{{ s.en }}</small>
           </h3>
-          <span>{{ s.items.length }} 项动作</span>
+          <span>{{ s.doneCount }} / {{ s.items.length }} 已完成</span>
         </div>
         <div class="exercise-list">
           <ExerciseCard
@@ -111,6 +119,7 @@ const sections = computed(() =>
             :key="`${training.date.value}-${currentDay.id}-${item.id}`"
             :item="item"
             :done="!!training.record.value.done[item.id]"
+            :next="item.id === nextItem?.id"
             :replacement="training.record.value.replacements[item.id]"
             @toggle="training.toggle(item.id)"
             @replace="training.replace(item, $event)"

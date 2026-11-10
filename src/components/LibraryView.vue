@@ -28,7 +28,7 @@ const filtered = computed(() =>
         <h1>练之前，多了解一点<span>。</span></h1>
         <p class="muted">四分化计划与动作资料，都在这里。</p>
       </div>
-      <span class="library-count">32 <small>个动作</small></span>
+      <span class="library-count">{{ warmups.length + exercises.length }} <small>个动作</small></span>
     </div>
     <div class="category-tabs" aria-label="资料分类">
       <button
