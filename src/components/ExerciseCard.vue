@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import { actions } from "../data";
 import ActionDetail from "./ActionDetail.vue";
 const props = defineProps({
@@ -7,17 +7,31 @@ const props = defineProps({
   done: Boolean,
   replacement: String,
   readonly: Boolean,
+  next: Boolean,
 });
 defineEmits(["toggle", "replace"]);
 const open = ref(false);
+const detailToggle = ref(null);
 const action = computed(
   () => actions[props.replacement || props.item.actionId],
 );
+const isSupport = computed(() => action.value.id === "E014");
+const dose = computed(() => {
+  if (isSupport.value) return "支撑时长／组次待确认";
+  if (props.item.dose === "原文未说明") return "组次／时长未说明";
+  return props.item.dose;
+});
+watch(
+  () => props.replacement,
+  () => detailToggle.value?.focus({ preventScroll: true }),
+  { flush: "post" },
+);
 </script>
 <template>
-  <article class="exercise-card" :class="{ done, open }">
+  <article class="exercise-card" :class="{ done, open, next }">
     <div class="exercise-row">
       <button
+        ref="detailToggle"
         class="exercise-main"
         :aria-expanded="open"
         :aria-controls="`detail-${item.id}`"
@@ -27,10 +41,10 @@ const action = computed(
         ><span class="exercise-copy"
           ><span class="exercise-name"
             >{{ action.name }}
-            <span v-if="replacement" class="mini-tag">已替换</span></span
+            <span v-if="replacement" class="mini-tag">已替换</span>
+            <span v-if="next" class="mini-tag next-tag">下一项</span></span
           ><span class="dose"
-            >{{ item.dose === "原文未说明" ? "组次／时长未说明" : item.dose
-            }}<em v-if="item.side === '每侧'">每侧</em
+            >{{ dose }}<em v-if="!isSupport && item.side === '每侧'">每侧</em
             ><em v-if="item.superset !== '—'">超级组 A</em></span
           ></span
         ><span class="chevron" :class="{ rotated: open }">⌄</span></button

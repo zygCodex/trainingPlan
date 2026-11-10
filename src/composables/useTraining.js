@@ -37,10 +37,7 @@ export function useTraining() {
           for (const p of plan.filter((p) => p.day === +key)) {
             if (value.done?.[p.id] === true) done[p.id] = true;
             const target = value.replacements?.[p.id];
-            if (
-              actions[p.actionId].alternatives.includes(target) &&
-              target !== "E014"
-            )
+            if (actions[p.actionId].alternatives.includes(target))
               replacements[p.id] = target;
           }
           clean[key] = {
@@ -128,10 +125,10 @@ export function useTraining() {
     if (!ensureDate() || !items.value.some((p) => p.id === item.id)) return;
     if (
       target !== item.actionId &&
-      (!actions[item.actionId].alternatives.includes(target) ||
-        target === "E014")
+      !actions[item.actionId].alternatives.includes(target)
     )
       return;
+    if (target === (record.value.replacements[item.id] || item.actionId)) return;
     const r = current();
     if (
       r.done[item.id] &&

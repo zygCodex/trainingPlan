@@ -393,8 +393,12 @@ main {
   overflow: hidden;
   transition: border-color 0.2s;
 }
-.exercise-card.open {
+.exercise-card.open,
+.exercise-card.next {
   border-color: #6b7c4f;
+}
+.exercise-name .next-tag {
+  color: var(--lime);
 }
 .exercise-row {
   display: flex;
