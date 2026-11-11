@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from "vue";
 import ActionIllustration from "./ActionIllustration.vue";
+import ActionNotes from "./ActionNotes.vue";
 import { actions } from "../data";
 const props = defineProps({ action: Object, item: Object, editable: Boolean });
 defineEmits(["replace"]);
@@ -79,10 +80,7 @@ const alternatives = computed(() =>
     >
       替代动作：原文未提供。
     </p>
-    <div class="personal-note">
-      <h4>✎ 个人心得</h4>
-      <p>{{ action.notes || "暂无心得，留一点空间给自己的感受。" }}</p>
-    </div>
+    <ActionNotes :action="action" />
     <p v-if="item" class="small muted">计划备注：{{ item.remark }}</p>
     <details class="source-note">
       <summary>来源备注</summary>

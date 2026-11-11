@@ -1,4 +1,5 @@
 import { actions, plan } from "../data";
+import { NOTES_KEY, MAX_NOTE_LENGTH } from "../composables/useActionNotes";
 
 export const TRAINING_KEY = "lianjiu.training.v1";
 export const MASTERY_KEY = "lianjiu.mastery.v1";
@@ -44,15 +45,25 @@ export function validateData(data) {
     }
     training[date] = { day: session.day, records };
   }
-  return { training, mastery };
+  const result = { training, mastery };
+  if (owns(data, "notes")) {
+    requireValue(object(data.notes));
+    result.notes = {};
+    for (const [id, text] of Object.entries(data.notes)) {
+      requireValue(owns(actions, id) && typeof text === "string" && text.length <= MAX_NOTE_LENGTH);
+      result.notes[id] = text;
+    }
+  }
+  return result;
 }
 
 export function createBackup(storage = localStorage) {
   const data = validateData({
     training: JSON.parse(storage.getItem(TRAINING_KEY) || "{}"),
     mastery: JSON.parse(storage.getItem(MASTERY_KEY) || "{}"),
+    notes: JSON.parse(storage.getItem(NOTES_KEY) || "{}"),
   });
-  return { app: "lianjiu", version: 1, exportedAt: new Date().toISOString(), data };
+  return { app: "lianjiu", version: 2, exportedAt: new Date().toISOString(), data };
 }
 
 export function parseBackup(text) {
@@ -60,16 +71,22 @@ export function parseBackup(text) {
   try { backup = JSON.parse(text); }
   catch { throw new Error("文件不是有效的 JSON，当前记录未修改。"); }
   requireValue(object(backup) && backup.app === "lianjiu");
-  if (backup.version !== 1) throw new Error("暂不支持此备份版本，当前记录未修改。");
+  if (![1, 2].includes(backup.version)) throw new Error("暂不支持此备份版本，当前记录未修改。");
   requireValue(typeof backup.exportedAt === "string" && !Number.isNaN(Date.parse(backup.exportedAt)));
-  return { ...backup, data: validateData(backup.data) };
+  if (backup.version === 2) requireValue(object(backup.data) && owns(backup.data, "notes"));
+  const data = validateData(backup.data);
+  // Old exports never contained personal notes; preserve current notes on import.
+  if (backup.version === 1) delete data.notes;
+  return { ...backup, data };
 }
 
 export function restoreBackup(backup, storage = localStorage) {
   const data = validateData(backup.data);
   const keys = [TRAINING_KEY, MASTERY_KEY];
+  if (owns(data, "notes")) keys.push(NOTES_KEY);
   const previous = keys.map((key) => storage.getItem(key));
   const values = [JSON.stringify(data.training), JSON.stringify(data.mastery)];
+  if (owns(data, "notes")) values.push(JSON.stringify(data.notes));
   const written = [];
   try {
     keys.forEach((key, index) => {

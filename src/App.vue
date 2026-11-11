@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { reloadActionNotes } from "./composables/useActionNotes";
 import { useTraining } from "./composables/useTraining";
 import TrainingView from "./components/TrainingView.vue";
 import LibraryView from "./components/LibraryView.vue";
@@ -10,6 +11,7 @@ const tab = ref("today"),
   libraryVersion = ref(0);
 function restored() {
   training.reload();
+  reloadActionNotes();
   libraryVersion.value++;
 }
 function navigate(value) {
@@ -49,7 +51,7 @@ function navigate(value) {
       >
         {{ training.storageWarning.value }}
       </div>
-      <TrainingView v-if="tab === 'today'" :training="training" /><LibraryView
+      <TrainingView v-if="tab === 'today'" :key="libraryVersion" :training="training" /><LibraryView
         v-else :key="libraryVersion"
       />
       <DataBackup @restored="restored" />
