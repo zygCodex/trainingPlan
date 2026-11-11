@@ -218,7 +218,7 @@
       "module": "胸",
       "equipment": "杠铃；平板卧推凳；卧推架",
       "muscles": "胸大肌；肱三头肌参与",
-      "instructions": "下放到底时小臂垂直地面；原文描述出架后杠铃位于眼鼻中线上方，再下落触胸；肘向躯干微收，大臂约45°～60°；全握杠铃，注意虎口侧抓握；臀部贴凳，避免极端起桥；不适时不盲目追求行程。",
+      "instructions": "下放到底时小臂垂直地面；原文描述出架后杠铃位于眼鼻中线上方，再下落触胸；肘向躯干微收，大臂约45°～60°；全握杠铃，注意虎口侧抓握；臀部贴凳，避免极端起桥；原文按胸廓差异区分主动收肋与自然吸气挺胸；不适时不盲目追求行程。",
       "alternatives": [],
       "notes": "",
       "source": "Day 1。原文按肋骨开角讨论收肋／自然开肋，并提出左倾时的单腿抬起纠正建议；均属个体化提示，未作为默认执行步骤。",
@@ -291,7 +291,7 @@
       "module": "手臂",
       "equipment": "龙门架低位滑轮；绳索",
       "muscles": "肱三头肌长头",
-      "instructions": "滑轮调低，手肘向内收并抬高；伸展时主动收缩三头，保持躯干稳定。",
+      "instructions": "滑轮调至最低，手肘向内收并抬高；伸展时小臂伸直、收缩三头，保持躯干稳定。",
       "alternatives": [],
       "notes": "",
       "source": "Day 1、Day 4 共用；肩日强调避免关节超伸锁死。",
@@ -1174,7 +1174,11 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "保持恒定张力。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P002",
@@ -1187,7 +1191,11 @@
       "side": "双侧",
       "superset": "—",
       "remark": "前锯肌与胸廓激活。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P003",
@@ -1200,7 +1208,24 @@
       "side": "双侧",
       "superset": "—",
       "remark": "适应组次数未单独说明。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": {
+          "kind": "适应",
+          "sets": 1,
+          "reps": null
+        },
+        "work": {
+          "sets": [
+            3,
+            3
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P004",
@@ -1213,7 +1238,24 @@
       "side": "双侧",
       "superset": "—",
       "remark": "热身组次数未单独说明；后程自然衰减至8次即可，原文不强制减重。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": {
+          "kind": "热身",
+          "sets": 1,
+          "reps": null
+        },
+        "work": {
+          "sets": [
+            5,
+            5
+          ],
+          "reps": [
+            8,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "P005",
@@ -1226,7 +1268,24 @@
       "side": "双侧",
       "superset": "—",
       "remark": "适应组次数未单独说明。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": {
+          "kind": "适应",
+          "sets": 1,
+          "reps": null
+        },
+        "work": {
+          "sets": [
+            3,
+            3
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P006",
@@ -1239,7 +1298,24 @@
       "side": "双侧",
       "superset": "—",
       "remark": "辅助项；适应组次数未单独说明；原文提示慢下快推。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": {
+          "kind": "适应",
+          "sets": 1,
+          "reps": null
+        },
+        "work": {
+          "sets": [
+            3,
+            3
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P007",
@@ -1252,7 +1328,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "肱三头肌长头。",
-      "day": 1
+      "day": 1,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            3,
+            4
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P008",
@@ -1265,7 +1354,11 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "肩胛撑起，配合深吸气。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P009",
@@ -1278,7 +1371,11 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "原文描述单侧操作，但未明确双侧剂量。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P010",
@@ -1291,7 +1388,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "按原文归入正式训练。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            12,
+            15
+          ]
+        }
+      }
     },
     {
       "id": "P011",
@@ -1304,7 +1414,20 @@
       "side": "每侧",
       "superset": "—",
       "remark": "原文也允许E023器械形式。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            12,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P012",
@@ -1317,7 +1440,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "可使用E024器械辅助形式。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P013",
@@ -1330,7 +1466,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "稳定骨盆，避免主动死夹背。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            12,
+            15
+          ]
+        }
+      }
     },
     {
       "id": "P014",
@@ -1343,7 +1492,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "避免后仰变成划船。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            12,
+            15
+          ]
+        }
+      }
     },
     {
       "id": "P015",
@@ -1356,7 +1518,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "原文也允许E025绳索形式。",
-      "day": 2
+      "day": 2,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P016",
@@ -1369,7 +1544,11 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "原文未说明每侧次数／时长。",
-      "day": 3
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P017",
@@ -1382,7 +1561,11 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "静力伸展，不弹震。",
-      "day": 3
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P018",
@@ -1395,7 +1578,20 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "可选E013；原文也列出E014，但支撑的时长／动态方式需核实后另定，不直接套用本组次。",
-      "day": 3
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            15,
+            20
+          ]
+        }
+      }
     },
     {
       "id": "P019",
@@ -1407,8 +1603,21 @@
       "dose": "3组×12次",
       "side": "每侧",
       "superset": "—",
-      "remark": "可扶立柱辅助平衡。",
-      "day": 3
+      "remark": "可扶立柱辅助平衡；原文另提到屈髋位单手划船预热，但未给组次。",
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            3,
+            3
+          ],
+          "reps": [
+            12,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P020",
@@ -1421,7 +1630,20 @@
       "side": "每侧",
       "superset": "—",
       "remark": "起身时后腿主动伸直为原文特定提示。",
-      "day": 3
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            3,
+            3
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P021",
@@ -1431,10 +1653,23 @@
       "name": "负重旋转弓步蹲",
       "stage": "正式训练",
       "dose": "3组×10次",
-      "side": "每侧",
+      "side": "原文未说明",
       "superset": "—",
-      "remark": "下蹲向支撑腿侧旋转，回正时向斜上方推起。",
-      "day": 3
+      "remark": "下蹲向支撑腿侧旋转，回正时向斜上方推起；原文未明确每侧计量。",
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            3,
+            3
+          ],
+          "reps": [
+            10,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "P022",
@@ -1447,7 +1682,20 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "原文未明确单腿或双腿版本。",
-      "day": 3
+      "day": 3,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            3,
+            4
+          ],
+          "reps": [
+            15,
+            20
+          ]
+        }
+      }
     },
     {
       "id": "P023",
@@ -1460,7 +1708,11 @@
       "side": "原文未说明",
       "superset": "—",
       "remark": "肩日强调小幅环绕。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P024",
@@ -1473,7 +1725,11 @@
       "side": "双侧",
       "superset": "—",
       "remark": "拇指朝上，注意下斜方肌控制。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": null
+      }
     },
     {
       "id": "P025",
@@ -1486,7 +1742,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "离心回放不触底。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            12,
+            15
+          ]
+        }
+      }
     },
     {
       "id": "P026",
@@ -1499,7 +1768,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "当天主项；原文建议使用腰带建立腹内压，强调核心稳定。未额外列出适应组。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            5,
+            5
+          ],
+          "reps": [
+            8,
+            10
+          ]
+        }
+      }
     },
     {
       "id": "P027",
@@ -1512,7 +1794,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "头部垫泡沫砖，使用中段行程。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            10,
+            15
+          ]
+        }
+      }
     },
     {
       "id": "P028",
@@ -1525,7 +1820,20 @@
       "side": "双侧",
       "superset": "—",
       "remark": "保持骨盆与胸廓控制。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P029",
@@ -1538,7 +1846,20 @@
       "side": "双侧",
       "superset": "D4-A",
       "remark": "与P030配对，每轮先三头再二头，交替完成4轮；原文未说明轮间休息。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     },
     {
       "id": "P030",
@@ -1551,7 +1872,20 @@
       "side": "双侧",
       "superset": "D4-A",
       "remark": "与P029使用同一低位滑轮切换；两动作各4组。",
-      "day": 4
+      "day": 4,
+      "prescription": {
+        "preparation": null,
+        "work": {
+          "sets": [
+            4,
+            4
+          ],
+          "reps": [
+            10,
+            12
+          ]
+        }
+      }
     }
   ]
 }

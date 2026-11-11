@@ -2,6 +2,7 @@
 import { computed } from "vue";
 import ActionIllustration from "./ActionIllustration.vue";
 import ActionNotes from "./ActionNotes.vue";
+import ActionPrescription from "./ActionPrescription.vue";
 import { actions } from "../data";
 const props = defineProps({ action: Object, item: Object, editable: Boolean });
 defineEmits(["replace"]);
@@ -28,15 +29,13 @@ const alternatives = computed(() =>
         <div class="detail-primary-facts">
           <dt>所属模块</dt><dd><span class="module-tag">{{ action.module }}</span></dd>
         </div>
-        <div v-if="item">
-          <dt>训练安排</dt><dd>{{ item.dose === "原文未说明" ? "组次／时长未说明" : item.dose }}<span v-if="item.side === '每侧'"> · 每侧</span></dd>
-        </div>
         <div><dt>目标部位</dt><dd>{{ action.muscles }}</dd></div>
         <div v-if="action.equipment !== '—'"><dt>使用器械</dt><dd>{{ action.equipment }}</dd></div>
         <div v-if="action.days"><dt>适用训练日</dt><dd>{{ action.days }}</dd></div>
       </dl>
     </div>
     <p v-if="action.illustration?.note" class="illustration-note">图示说明：{{ action.illustration.note }}</p>
+    <ActionPrescription :action="action" :item="item" />
     <slot name="rating" />
     <div v-if="editable && action.id !== original.id" class="replacement-info">
       当前替换自：{{ original.name }}
@@ -65,8 +64,8 @@ const alternatives = computed(() =>
       </div>
     </details>
     <details class="source-note">
-      <summary>来源与计划备注</summary>
-      <p v-if="item">计划备注：{{ item.remark }}</p>
+      <summary>来源备注</summary>
+
       <p>{{ action.source }}</p>
     </details>
   </div>

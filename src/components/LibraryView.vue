@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { plan, warmups, exercises, actionModules } from "../data";
+import { plan, warmups, exercises, actionModules, trainingForAction } from "../data";
 import DayPicker from "./DayPicker.vue";
 import ExerciseCard from "./ExerciseCard.vue";
 import ActionDetail from "./ActionDetail.vue";
@@ -103,6 +103,10 @@ const filtered = computed(() =>
               <h3>{{ a.name }}</h3>
               <span class="module-tag" :aria-label="`所属模块：${a.module}`">{{ a.module }}</span>
               <p>{{ a.muscles }}</p>
+              <p v-for="entry in trainingForAction(a.id)" :key="entry.id" class="library-prescription">
+                {{ entry.dayLabel }} · {{ a.id === "E014" ? "支撑时长待核实" : entry.dose === "原文未说明" ? "组次／时长未说明" : entry.dose }}<span v-if="entry.side === '每侧'"> · 每侧</span>
+              </p>
+              <p v-if="!trainingForAction(a.id).length" class="library-prescription">图示补充 · 组次未说明</p>
               <p class="mastery-summary" :class="{ rated: scores[a.id] }">
                 掌握程度 · {{ scores[a.id] ? `${scores[a.id]} / 10 · ` : "" }}{{ masteryLabel(scores[a.id]) }}
               </p>

@@ -51,3 +51,9 @@ export const days = [
     main: "低强度活动",
   },
 ];
+
+// Keep training amounts tied to their day, including source-listed alternatives.
+export function trainingForAction(id) {
+  return plan.filter((item) => item.actionId === id || actions[item.actionId].alternatives.includes(id))
+    .map((item) => ({ ...item, prescription: id === "E014" ? null : item.prescription }));
+}

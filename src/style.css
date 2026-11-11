@@ -1411,3 +1411,18 @@ main {
   .exercise-main .order { min-width: 16px; font-size: 13px; }
   .library-card .mastery-summary { line-height: 1.7; }
 }
+
+.prescription-panel { margin: 18px 0 0; padding: 14px; border: 1px solid #53633c; border-radius: 8px; background: #222c1b; }
+.action-detail .prescription-panel h4 { margin: 0 0 12px; color: var(--lime); font-size: 15px; }
+.prescription-entry + .prescription-entry { border-top: 1px solid #3d4932; margin-top: 12px; padding-top: 12px; }
+.prescription-day { font-size: 13px; color: #c1d4ab; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.prescription-day span { font-size: 12px; padding: 1px 6px; border: 1px solid #53633c; border-radius: 4px; }
+.prescription-lines { margin: 0; display: grid; gap: 8px; }
+.prescription-lines > div { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 8px; }
+.prescription-lines dt { color: #a9b59c; font-size: 13px; }
+.prescription-lines dd { margin: 0; color: #edf0e8; font-size: 15px; font-weight: 600; }
+.prescription-lines small { display: inline-block; color: var(--muted); font-weight: 400; font-size: 12px; }
+.prescription-lines .prescription-work dd { color: var(--lime); }
+.prescription-missing { color: #9ba88f; font-size: 12px; line-height: 1.8; margin: 8px 0 0; }
+.prescription-remark { color: #b9c5ad; font-size: 13px; line-height: 1.8; margin: 8px 0 0; }
+.library-card summary .library-prescription { color: #c0d59f; font-size: 13px; line-height: 1.8; margin: 6px 0 0; overflow-wrap: anywhere; }

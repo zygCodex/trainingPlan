@@ -5,6 +5,17 @@ import re
 root = Path(__file__).resolve().parent.parent
 rows = [list(map(str.strip, line.split('|')[1:-1])) for line in (root / 'training-plan.md').read_text().splitlines() if re.match(r'^\| [WEP]\d{3} \|', line)]
 warmups, exercises, plan = [], [], []
+def parse_prescription(dose):
+    if dose == '原文未说明':
+        return {'preparation': None, 'work': None}
+    match = re.fullmatch(r'(?:(\d+)组(适应|热身)\+)?(\d+)(?:～(\d+))?组(?:正式)?×(\d+)(?:～(\d+))?次', dose)
+    assert match, f'Unrecognized explicit prescription: {dose}'
+    prep_sets, prep_kind, sets_min, sets_max, reps_min, reps_max = match.groups()
+    return {
+        'preparation': {'kind': prep_kind, 'sets': int(prep_sets), 'reps': None} if prep_sets else None,
+        'work': {'sets': [int(sets_min), int(sets_max or sets_min)], 'reps': [int(reps_min), int(reps_max or reps_min)]},
+    }
+
 for r in rows:
     if r[0].startswith('W'):
         warmups.append(dict(zip(['id','name','module','instructions','muscles','days','notes','source'], r)) | {'equipment':'—', 'alternatives':[]})
@@ -15,6 +26,7 @@ for r in rows:
     else:
         item = dict(zip(['id','dayLabel','order','actionId','name','stage','dose','side','superset','remark'], r))
         item['day'] = int(re.search(r'Day (\d)', item['dayLabel'])[1]); item['order'] = int(item['order'])
+        item['prescription'] = parse_prescription(item['dose'])
         plan.append(item)
 assert all(x['module'] in {'胸', '肩', '背', '腿', '手臂', '腹部'} for x in warmups + exercises)
 ids = [x['id'] for x in warmups + exercises + plan]
