@@ -1,17 +1,21 @@
 <script setup>
 import { ref } from "vue";
+import { reloadMastery } from "./composables/useMastery";
+import { useImagePreference } from "./composables/useImagePreference";
 import { reloadActionNotes } from "./composables/useActionNotes";
 import { useTraining } from "./composables/useTraining";
 import TrainingView from "./components/TrainingView.vue";
 import LibraryView from "./components/LibraryView.vue";
 import DataBackup from "./components/DataBackup.vue";
 import CelebrationModal from "./components/CelebrationModal.vue";
+const { showImages, setShowImages, imagePreferenceWarning } = useImagePreference();
 const tab = ref("today"),
   training = useTraining(),
   libraryVersion = ref(0);
 function restored() {
   training.reload();
   reloadActionNotes();
+  reloadMastery();
   libraryVersion.value++;
 }
 function navigate(value) {
@@ -41,9 +45,14 @@ function navigate(value) {
           全部数据
         </button>
       </nav>
-      <span class="header-tag"><i></i> 一点一点，练就自己</span>
+      <label class="image-visibility">
+        <span>显示图片</span>
+        <input type="checkbox" role="switch" :checked="showImages" aria-label="显示图片" @change="setShowImages($event.target.checked)" />
+        <span class="image-switch-track" aria-hidden="true"></span>
+      </label>
     </header>
     <main>
+      <p v-if="imagePreferenceWarning" class="storage-warning" role="status">{{ imagePreferenceWarning }}</p>
       <div
         v-if="training.storageWarning.value"
         class="storage-warning"

@@ -13,22 +13,28 @@ export function masteryLabel(score) {
   return "很有把握";
 }
 
-export function useMastery() {
-  const scores = ref({});
-  const storageWarning = ref("");
+const scores = ref({});
+const storageWarning = ref("");
+let loaded = false;
+export function reloadMastery() {
+  loaded = true;
+  scores.value = {};
+  storageWarning.value = "";
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) || "{}");
     if (saved && typeof saved === "object" && !Array.isArray(saved)) {
-      scores.value = Object.fromEntries(
-        Object.entries(saved).filter(([id, score]) => actions[id] && validScore(score)),
-      );
+      scores.value = Object.fromEntries(Object.entries(saved).filter(([id, score]) =>
+        Object.prototype.hasOwnProperty.call(actions, id) && validScore(score),
+      ));
     }
   } catch {
     storageWarning.value = "无法读取本地评分，本次仍可打分。";
   }
-
+}
+export function useMastery() {
+  if (!loaded) reloadMastery();
   function setScore(id, value) {
-    if (!actions[id]) return;
+    if (!Object.prototype.hasOwnProperty.call(actions, id)) return;
     const score = value === "" ? null : Number(value);
     if (score !== null && !validScore(score)) return;
     if (score === null) delete scores.value[id];

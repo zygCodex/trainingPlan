@@ -1,5 +1,7 @@
 <script setup>
 import { computed } from "vue";
+import { useImagePreference } from "../composables/useImagePreference";
+const { showImages } = useImagePreference();
 const props = defineProps({ illustration: Object, compact: Boolean });
 const source = computed(() => `${import.meta.env.BASE_URL}${props.illustration.src}`);
 const frameStyle = computed(() => ({ aspectRatio: `${props.illustration.region[2]} / ${props.illustration.region[3]}` }));
@@ -14,7 +16,7 @@ const imageStyle = computed(() => {
 });
 </script>
 <template>
-  <div class="action-illustration" :class="{ compact }" :style="frameStyle">
+  <div v-if="showImages" class="action-illustration" :class="{ compact }" :style="frameStyle">
     <img
       :src="source"
       :alt="compact ? '' : `${illustration.label} · ${illustration.sourceKind === 'ai' ? 'AI 生成动作示意图' : '用户提供的动作插画'}`"

@@ -1,6 +1,8 @@
 <script setup>
-import { computed } from "vue";
-import ActionIllustration from "./ActionIllustration.vue";
+import { computed, useId } from "vue";
+import { useMastery, masteryLabel } from "../composables/useMastery";
+const { scores, storageWarning, setScore } = useMastery();
+const ratingId = useId();
 import ActionNotes from "./ActionNotes.vue";
 import ActionPrescription from "./ActionPrescription.vue";
 import { actions } from "../data";
@@ -20,23 +22,25 @@ const alternatives = computed(() =>
 </script>
 <template>
   <div class="action-detail">
+    <div class="detail-topline">
+      <span class="module-tag">{{ action.module }}</span>
+      <label class="compact-mastery" :for="ratingId">
+        <span>掌握程度</span>
+        <select :id="ratingId" :aria-label="`${action.name}的掌握程度`" :value="scores[action.id] ?? ''" @change="setScore(action.id, $event.target.value)">
+          <option value="">尚未评分</option>
+          <option v-for="score in 10" :key="score" :value="score">{{ score }} 分 · {{ masteryLabel(score) }}</option>
+        </select>
+      </label>
+    </div>
+    <p v-if="storageWarning" class="storage-warning" role="status">{{ storageWarning }}</p>
     <div class="detail-overview">
-      <figure v-if="action.illustration" class="action-figure">
-        <ActionIllustration :key="action.id" :illustration="action.illustration" />
-        <figcaption>{{ action.illustration.sourceKind === "ai" ? "AI 生成示意图" : "动作示意图" }}</figcaption>
-      </figure>
       <dl class="detail-facts">
-        <div class="detail-primary-facts">
-          <dt>所属模块</dt><dd><span class="module-tag">{{ action.module }}</span></dd>
-        </div>
         <div><dt>目标部位</dt><dd>{{ action.muscles }}</dd></div>
         <div v-if="action.equipment !== '—'"><dt>使用器械</dt><dd>{{ action.equipment }}</dd></div>
         <div v-if="action.days"><dt>适用训练日</dt><dd>{{ action.days }}</dd></div>
       </dl>
     </div>
-    <p v-if="action.illustration?.note" class="illustration-note">图示说明：{{ action.illustration.note }}</p>
     <ActionPrescription :action="action" :item="item" />
-    <slot name="rating" />
     <div v-if="editable && action.id !== original.id" class="replacement-info">
       当前替换自：{{ original.name }}
       <button class="text-button" @click="$emit('replace', original.id)">恢复原动作 ↩</button>
@@ -67,6 +71,8 @@ const alternatives = computed(() =>
       <summary>来源备注</summary>
 
       <p>{{ action.source }}</p>
+      <p v-if="action.illustration?.sourceKind === 'ai'">动作图片为 AI 生成示意图。</p>
+      <p v-if="action.illustration?.note">图示说明：{{ action.illustration.note }}</p>
     </details>
   </div>
 </template>
