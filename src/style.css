@@ -1303,7 +1303,7 @@ main {
 .backup-preview p { margin: 8px 0; }
 .backup-message { color: var(--lime); }
 
-.library-card > summary > div:first-child { min-width: 0; flex: 1; }
+.library-card-title { min-width: 0; flex: 1; }
 .action-illustration {
   position: relative;
   overflow: hidden;
@@ -1366,3 +1366,48 @@ main {
 .personal-note .note-counter { color: var(--muted); font-size: 13px; margin: 8px 0; }
 .note-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
 .personal-note .note-message { color: var(--lime); font-size: 13px; margin-top: 8px; }
+
+/* Compact overview and shared thumbnails for every action entry. */
+.action-detail,
+.library-card .action-detail { padding: 18px 20px 20px; }
+.detail-overview { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 16px; align-items: start; }
+.detail-overview .action-figure { width: 104px; margin: 0; }
+.detail-overview .action-figure figcaption { font-size: 11px; margin-top: 6px; }
+.detail-facts { margin: 0; display: grid; gap: 10px; min-width: 0; }
+.detail-facts > div { min-width: 0; }
+.detail-facts dt { font-size: 12px; color: var(--muted); margin: 0 0 2px; }
+.detail-facts dd { margin: 0; color: #dbe2d4; font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.detail-primary-facts { display: flex; align-items: center; gap: 8px; }
+.detail-primary-facts dt { margin: 0; }
+.detail-primary-facts .module-tag { margin: 0; }
+.action-detail .illustration-note { margin: 12px 0 0; padding: 8px 10px; background: #252b20; border-radius: 6px; font-size: 12px; }
+.detail-instructions { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.detail-instructions h4 { margin: 0 0 12px; }
+.cues { list-style: none; counter-reset: cue; padding: 0; display: grid; gap: 10px; line-height: 1.85; }
+.cues li { counter-increment: cue; position: relative; padding: 0 0 0 30px; margin: 0; }
+.cues li::before { content: counter(cue); position: absolute; left: 0; top: 3px; width: 20px; height: 20px; line-height: 20px; text-align: center; border-radius: 5px; color: var(--lime); background: #2d3923; font-size: 12px; }
+.detail-alternatives { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.detail-alternatives > summary { cursor: pointer; min-height: 36px; align-content: center; color: #dbe2d4; font-size: 14px; }
+.detail-alternatives > summary span { color: var(--muted); font-size: 12px; margin-left: 8px; }
+.action-detail .source-note { padding-top: 12px; border-top: 1px solid var(--border); }
+.action-detail .source-note > summary { min-height: 36px; align-content: center; }
+.action-detail .personal-note { margin: 20px 0 0; padding: 10px 12px 14px; border-radius: 0 8px 8px 0; }
+.action-detail .mastery-field { margin: 16px 0 0; padding: 10px 12px; border: 1px solid #3a4730; border-radius: 8px; }
+.mastery-field .mastery-heading { gap: 8px; }
+.mastery-field .mastery-heading label { font-size: 14px; }
+.mastery-field .mastery-heading select { min-height: 40px; padding: 6px 10px; font-size: 15px; }
+.mastery-field .mastery-status { display: inline-block; font-size: 13px; margin: 8px 12px 0 0; }
+.mastery-help { display: inline-block; vertical-align: top; margin-top: 8px; color: var(--muted); font-size: 12px; }
+.mastery-help > summary { cursor: pointer; }
+.mastery-help[open] { display: block; }
+.exercise-main > .action-illustration.compact { width: 60px; flex-basis: 60px; }
+.exercise-main { gap: 14px; }
+@media (max-width: 700px) {
+  .action-detail, .library-card .action-detail { padding: 16px; }
+  .detail-overview { grid-template-columns: 96px minmax(0, 1fr); gap: 12px; }
+  .detail-overview .action-figure { width: 96px; }
+  .exercise-main { gap: 8px; padding-left: 10px; }
+  .exercise-main > .action-illustration.compact { width: 46px; flex-basis: 46px; }
+  .exercise-main .order { min-width: 16px; font-size: 13px; }
+  .library-card .mastery-summary { line-height: 1.7; }
+}

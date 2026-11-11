@@ -94,7 +94,8 @@ const filtered = computed(() =>
       <div class="library-grid">
         <details v-for="a in filtered" :key="a.id" class="library-card">
           <summary>
-            <div>
+            <ActionIllustration v-if="a.illustration" :illustration="a.illustration" compact />
+            <div class="library-card-title">
               <span class="eyebrow"
                 >{{ a.id }} /
                 {{ category === "warmups" ? "WARM UP" : "EXERCISE" }}</span
@@ -106,12 +107,13 @@ const filtered = computed(() =>
                 掌握程度 · {{ scores[a.id] ? `${scores[a.id]} / 10 · ` : "" }}{{ masteryLabel(scores[a.id]) }}
               </p>
             </div>
-            <ActionIllustration v-if="a.illustration" :illustration="a.illustration" compact />
             <span class="chevron">⌄</span>
           </summary>
+          <ActionDetail :action="a">
+            <template #rating>
           <div class="mastery-field">
             <div class="mastery-heading">
-              <label :for="`mastery-${a.id}`">我的掌握程度</label>
+              <label :for="`mastery-${a.id}`">掌握程度</label>
               <select
                 :id="`mastery-${a.id}`"
                 :value="scores[a.id] ?? ''"
@@ -123,9 +125,10 @@ const filtered = computed(() =>
               </select>
             </div>
             <p class="mastery-status" role="status">{{ masteryLabel(scores[a.id]) }}</p>
-            <p class="mastery-guide">1–2 刚开始了解 · 3–4 正在熟悉 · 5–6 基本掌握 · 7–8 比较熟练 · 9–10 很有把握</p>
+            <details class="mastery-help"><summary>评分标准</summary><p class="mastery-guide">1–2 刚开始了解 · 3–4 正在熟悉 · 5–6 基本掌握 · 7–8 比较熟练 · 9–10 很有把握</p></details>
           </div>
-          <ActionDetail :action="a" />
+            </template>
+          </ActionDetail>
         </details>
       </div>
       <div v-if="!filtered.length" class="empty">

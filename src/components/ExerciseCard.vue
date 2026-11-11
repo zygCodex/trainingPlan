@@ -2,6 +2,7 @@
 import { ref, computed } from "vue";
 import { actions } from "../data";
 import ActionDetail from "./ActionDetail.vue";
+import ActionIllustration from "./ActionIllustration.vue";
 const props = defineProps({
   item: Object,
   done: Boolean,
@@ -24,7 +25,8 @@ const action = computed(
         @click="open = !open"
       >
         <span class="order">{{ String(item.order).padStart(2, "0") }}</span
-        ><span class="exercise-copy"
+        ><ActionIllustration v-if="action.illustration" :key="action.id" :illustration="action.illustration" compact />
+        <span class="exercise-copy"
           ><span class="exercise-name"
             >{{ action.name }}
             <span v-if="replacement" class="mini-tag">已替换</span></span
