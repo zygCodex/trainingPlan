@@ -91,7 +91,7 @@ button:hover:not(:disabled) {
   letter-spacing: 1px;
 }
 .brand strong span {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
   margin-left: 9px;
@@ -105,7 +105,7 @@ button:hover:not(:disabled) {
 }
 .desktop-nav button {
   padding: 0 4px;
-  font-size: 14px;
+  font-size: 17px;
   color: var(--muted);
   position: relative;
 }
@@ -123,7 +123,7 @@ button:hover:not(:disabled) {
 }
 .header-tag {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 .header-tag i,
@@ -146,7 +146,7 @@ main {
   gap: 15px;
 }
 .eyebrow {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--lime);
@@ -162,17 +162,17 @@ main {
   color: var(--lime);
 }
 .page-intro .muted {
-  font-size: 13px;
+  font-size: 16px;
   margin: 0;
 }
 .muted {
   color: var(--muted);
 }
 .small {
-  font-size: 12px;
+  font-size: 15px;
 }
 .date-label {
-  font-size: 11px;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
   color: #a4ab9b;
   letter-spacing: 1px;
@@ -180,7 +180,7 @@ main {
 }
 .day-picker {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
   margin: 24px 0;
 }
@@ -196,7 +196,7 @@ main {
 }
 .day-picker button > span {
   display: block;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 1.5px;
   color: var(--muted);
   margin-bottom: 2px;
@@ -209,7 +209,7 @@ main {
   position: absolute;
   right: 14px;
   bottom: 16px;
-  font-size: 10px;
+  font-size: 13px;
   color: #68705f;
   font-style: normal;
 }
@@ -240,7 +240,7 @@ main {
   width: 76%;
 }
 .hero-label {
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 2px;
   color: #d7e8b9;
   font-weight: 700;
@@ -252,7 +252,7 @@ main {
   line-height: 1.4;
 }
 .hero-copy > p {
-  font-size: 13px;
+  font-size: 16px;
   color: #c0cbb4;
   margin: 0;
 }
@@ -260,15 +260,16 @@ main {
   display: flex;
   align-items: center;
   gap: 22px;
+  flex-wrap: wrap;
   margin-top: 27px;
-  font-size: 11px;
+  font-size: 14px;
   color: #c8d3be;
 }
 .pill {
   border: 1px solid #73895a;
   border-radius: 20px;
   padding: 3px 11px;
-  font-size: 10px;
+  font-size: 13px;
   color: #e4f1d3;
   white-space: nowrap;
 }
@@ -306,7 +307,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .progress-panel strong {
   font-weight: 500;
@@ -336,7 +337,7 @@ main {
   transition: width 0.35s;
 }
 .progress-panel > p {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   margin: 0;
 }
@@ -371,14 +372,14 @@ main {
   color: #e6ad73;
 }
 .section-heading small {
-  font-size: 9px;
+  font-size: 12px;
   color: #7f8975;
   letter-spacing: 1.6px;
   margin-left: 3px;
   font-weight: 500;
 }
 .section-heading > span {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .exercise-list {
@@ -425,20 +426,20 @@ main {
 }
 .exercise-name {
   display: block;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 550;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
 .dose {
   display: block;
-  font-size: 11px;
+  font-size: 14px;
   color: #9ba68e;
   margin-top: 4px;
 }
 .dose em {
   font-style: normal;
-  font-size: 9px;
+  font-size: 12px;
   padding: 2px 5px;
   border-radius: 3px;
   background: #343d2a;
@@ -489,7 +490,7 @@ main {
 }
 .action-detail {
   padding: 4px 24px 23px 62px;
-  font-size: 12px;
+  font-size: 15px;
   border-top: 1px solid #30372a;
 }
 .detail-meta {
@@ -508,13 +509,13 @@ main {
   margin-left: 7px;
 }
 .action-detail h4 {
-  font-size: 12px;
+  font-size: 15px;
   color: #dee7d3;
   margin: 20px 0 8px;
   font-weight: 600;
 }
 .action-detail h4 small {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--muted);
   margin-left: 10px;
@@ -545,7 +546,7 @@ main {
 .personal-note p {
   margin: 0;
   color: #8d9d7a;
-  font-size: 12px;
+  font-size: 15px;
 }
 .callout {
   padding: 12px;
@@ -565,13 +566,13 @@ main {
   background: #28351f;
   width: 100%;
   color: #d5e7ba;
-  font-size: 12px;
+  font-size: 15px;
   min-height: 44px;
 }
 .alternative span:last-child {
   white-space: nowrap;
   color: var(--lime);
-  font-size: 10px;
+  font-size: 13px;
 }
 .alternatives {
   display: flex;
@@ -587,7 +588,7 @@ main {
   color: #9fae8d;
 }
 .replacement-info {
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 16px;
   color: #a5b792;
 }
@@ -598,7 +599,7 @@ main {
 }
 .source-note {
   color: #8a9680;
-  font-size: 10px;
+  font-size: 13px;
   margin-top: 13px;
 }
 .source-note summary {
@@ -609,7 +610,7 @@ main {
   line-height: 1.9;
 }
 .mini-tag {
-  font-size: 9px;
+  font-size: 12px;
   background: #354623;
   color: var(--lime);
   padding: 2px 5px;
@@ -629,7 +630,7 @@ main {
   color: #768e5c;
 }
 .end-note p {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 1px;
   line-height: 1.8;
 }
@@ -638,7 +639,7 @@ main {
   display: flex;
   justify-content: space-between;
   color: #6e7864;
-  font-size: 9px;
+  font-size: 12px;
   padding: 22px 0 30px;
   letter-spacing: 0.5px;
   gap: 15px;
@@ -658,7 +659,7 @@ main {
   white-space: nowrap;
 }
 .library-count small {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   font-weight: 400;
 }
@@ -671,7 +672,7 @@ main {
 .category-tabs button {
   color: var(--muted);
   padding: 12px 18px;
-  font-size: 13px;
+  font-size: 16px;
   border-bottom: 2px solid transparent;
 }
 .category-tabs .active {
@@ -679,7 +680,7 @@ main {
   color: var(--lime);
 }
 .library-hint {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   margin: 18px 0;
 }
@@ -704,11 +705,11 @@ main {
   color: #edf0e8;
   flex: 1;
   min-width: 0;
-  font-size: 13px;
+  font-size: 16px;
   min-height: 24px;
 }
 .search > span:last-child {
-  font-size: 11px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .library-grid {
@@ -742,15 +743,15 @@ main {
   transform: rotate(180deg);
 }
 .library-card .eyebrow {
-  font-size: 8px;
+  font-size: 11px;
   color: #95aa78;
 }
 .library-card h3 {
-  font-size: 14px;
+  font-size: 17px;
   margin: 6px 0;
 }
 .library-card summary p {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   margin: 0;
 }
@@ -762,19 +763,19 @@ main {
   padding: 22px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 .source-footer h4 {
   margin: 0;
-  font-size: 12px;
+  font-size: 15px;
   color: #bac7aa;
 }
 .source-footer a {
   color: #b6cc96;
   margin-right: 18px;
   text-underline-offset: 4px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .recovery {
   text-align: center;
@@ -793,14 +794,14 @@ main {
   margin: 10px 0;
 }
 .recovery p {
-  font-size: 13px;
+  font-size: 16px;
 }
 .primary {
   border: 0;
   border-radius: 8px;
   background: var(--lime);
   color: #1a2710;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 650;
   padding: 14px 25px;
   min-height: 48px;
@@ -812,10 +813,10 @@ main {
   text-align: center;
   padding: 50px 10px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
 }
 .storage-warning {
-  font-size: 12px;
+  font-size: 15px;
   color: #f0c598;
   border: 1px solid #655138;
   padding: 12px;
@@ -855,7 +856,7 @@ main {
   margin: 12px 0;
 }
 .celebration > p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 15px;
   color: #b0bea1;
   line-height: 1.9;
   margin-bottom: 25px;
@@ -921,14 +922,14 @@ main {
     font-size: 25px;
   }
   .brand strong span {
-    font-size: 9px;
+    font-size: 12px;
     margin-left: 6px;
   }
   .desktop-nav {
     display: none;
   }
   .header-tag {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0;
   }
   .page-intro {
@@ -940,15 +941,15 @@ main {
     letter-spacing: 0;
   }
   .page-intro .muted {
-    font-size: 12px;
+    font-size: 15px;
   }
   .page-intro .eyebrow {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 1.8px;
   }
   .date-label {
     display: block;
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 14px;
   }
   .day-picker {
@@ -956,17 +957,18 @@ main {
     margin: 20px 0;
   }
   .day-picker button {
-    padding: 10px 8px;
+    padding: 10px 4px;
     min-height: 67px;
     border-radius: 8px;
   }
   .day-picker button > span {
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 0.6px;
   }
   .day-picker strong {
-    font-size: 12px;
-    white-space: nowrap;
+    font-size: 15px;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .day-picker i {
     display: none;
@@ -981,7 +983,7 @@ main {
     width: 100%;
   }
   .hero-label {
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 1.5px;
   }
   .hero h2 {
@@ -989,17 +991,17 @@ main {
     margin-top: 14px;
   }
   .hero-copy > p {
-    font-size: 11px;
+    font-size: 14px;
     max-width: 76%;
     line-height: 1.8;
   }
   .hero-bottom {
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 25px;
     gap: 12px;
   }
   .pill {
-    font-size: 8px;
+    font-size: 11px;
     padding: 3px 8px;
   }
   .hero-art {
@@ -1022,20 +1024,20 @@ main {
     padding-top: 21px;
   }
   .progress-panel > div:first-child {
-    font-size: 10px;
+    font-size: 13px;
   }
   .progress-panel b {
     font-size: 18px;
   }
   .progress-panel > p {
-    font-size: 9px;
+    font-size: 12px;
   }
   .section-heading h3 {
     font-size: 15px;
     gap: 8px;
   }
   .section-heading small {
-    font-size: 8px;
+    font-size: 11px;
     letter-spacing: 1px;
   }
   .training-section {
@@ -1050,18 +1052,18 @@ main {
     gap: 11px;
   }
   .order {
-    font-size: 13px;
+    font-size: 16px;
     min-width: 18px;
   }
   .exercise-name {
-    font-size: 13px;
+    font-size: 16px;
   }
   .dose {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.9;
   }
   .dose em {
-    font-size: 8px;
+    font-size: 11px;
     margin-left: 5px;
   }
   .check {
@@ -1080,7 +1082,7 @@ main {
   }
   .detail-meta {
     gap: 7px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .action-detail h4 {
     margin-top: 17px;
@@ -1111,7 +1113,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 9px;
-    font-size: 12px;
+    font-size: 15px;
     min-height: 42px;
     color: #8d9b7d;
     border-radius: 8px;
@@ -1125,7 +1127,7 @@ main {
     height: 21px;
   }
   .app-footer {
-    font-size: 8px;
+    font-size: 11px;
     padding-bottom: calc(95px + env(safe-area-inset-bottom));
     flex-wrap: wrap;
     gap: 5px;
@@ -1137,8 +1139,8 @@ main {
     display: none;
   }
   .category-tabs button {
-    padding: 12px 14px;
-    font-size: 12px;
+    padding: 12px 6px;
+    font-size: 15px;
     flex: 1;
     white-space: nowrap;
   }
@@ -1156,10 +1158,10 @@ main {
     font-size: 20px;
   }
   .recovery p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .library-card h3 {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
