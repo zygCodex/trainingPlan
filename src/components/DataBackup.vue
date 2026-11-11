@@ -5,6 +5,7 @@ const emit = defineEmits(["restored"]);
 const fileInput = ref(null), pending = ref(null), message = ref(""), error = ref(""), reading = ref(false);
 const dates = computed(() => Object.keys(pending.value?.data.training || {}).sort());
 const noteCount = computed(() => Object.keys(pending.value?.data.notes || {}).length);
+const todoCount = computed(() => pending.value?.data.todos?.length || 0);
 const scoreCount = computed(() => Object.keys(pending.value?.data.mastery || {}).length);
 function exportData() {
   error.value = "";
@@ -45,10 +46,10 @@ function confirmImport() {
   if (!pending.value) return;
   error.value = "";
   try {
-    const includesNotes = pending.value.version === 2;
+    const version = pending.value.version;
     restoreBackup(pending.value);
     pending.value = null;
-    message.value = includesNotes ? "导入成功，心得、评分和训练记录已更新。" : "导入成功，评分和训练记录已更新，原有心得已保留。";
+    message.value = version === 3 ? "导入成功，代办、心得、评分和训练记录已更新。" : version === 2 ? "导入成功，心得、评分和训练记录已更新，现有代办已保留。" : "导入成功，评分和训练记录已更新，现有心得和代办已保留。";
     emit("restored");
   } catch (cause) { error.value = cause.message; }
 }
@@ -56,7 +57,7 @@ function confirmImport() {
 <template>
   <details class="data-backup">
     <summary>数据备份 · 导入 / 导出</summary>
-    <p class="muted">备份包含所有动作的个人心得、掌握程度评分，以及各日期的训练完成、动作替换和恢复记录。动作资料和训练计划由网站提供，无需备份。</p>
+    <p class="muted">备份包含代办清单、所有动作的个人心得、掌握程度评分，以及各日期的训练完成、动作替换和恢复记录。动作资料和训练计划由网站提供，无需备份。</p>
     <div class="backup-actions">
       <button class="primary" @click="exportData">导出备份</button>
       <button class="backup-secondary" :disabled="reading" @click="fileInput.click()">{{ reading ? "正在读取…" : "导入备份" }}</button>
@@ -65,10 +66,11 @@ function confirmImport() {
     <section v-if="pending" class="backup-preview" aria-label="导入备份预览">
       <h3>确认导入备份</h3>
       <p>备份时间：{{ new Date(pending.exportedAt).toLocaleString("zh-CN") }}</p>
-      <p>{{ scoreCount }} 个动作评分 · {{ dates.length }} 天训练记录<span v-if="pending.version === 2"> · {{ noteCount }} 条动作心得</span></p>
+      <p>{{ scoreCount }} 个动作评分 · {{ dates.length }} 天训练记录<span v-if="pending.version >= 2"> · {{ noteCount }} 条动作心得</span><span v-if="pending.version === 3"> · {{ todoCount }} 条代办（含已完成记录）</span></p>
       <p v-if="dates.length">记录日期：{{ dates[0] }} 至 {{ dates[dates.length - 1] }}</p>
       <p v-if="pending.version === 1">这是旧版备份，不包含个人心得；导入时会保留当前心得。</p>
-      <p>导入将替换当前浏览器的全部评分和训练记录<span v-if="pending.version === 2">，以及个人心得</span>，包括备份中为空的数据。建议先导出当前记录，保留一份备份。</p>
+      <p v-if="pending.version < 3">旧版备份不包含代办清单；导入时会保留当前代办。</p>
+      <p>导入将替换当前浏览器的全部评分和训练记录<span v-if="pending.version >= 2">，以及个人心得</span><span v-if="pending.version === 3">和代办清单</span>，包括备份中为空的数据。建议先导出当前记录，保留一份备份。</p>
       <div class="backup-actions">
         <button class="primary" @click="confirmImport">确认替换并导入</button>
         <button class="backup-secondary" @click="cancel">取消</button>

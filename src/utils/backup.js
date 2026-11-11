@@ -1,3 +1,4 @@
+import { TODOS_KEY, validateTodos } from "./todos";
 import { actions, plan } from "../data";
 import { NOTES_KEY, MAX_NOTE_LENGTH } from "../composables/useActionNotes";
 
@@ -54,6 +55,7 @@ export function validateData(data) {
       result.notes[id] = text;
     }
   }
+  if (owns(data, "todos")) result.todos = validateTodos(data.todos);
   return result;
 }
 
@@ -62,8 +64,9 @@ export function createBackup(storage = localStorage) {
     training: JSON.parse(storage.getItem(TRAINING_KEY) || "{}"),
     mastery: JSON.parse(storage.getItem(MASTERY_KEY) || "{}"),
     notes: JSON.parse(storage.getItem(NOTES_KEY) || "{}"),
+    todos: JSON.parse(storage.getItem(TODOS_KEY) || "[]"),
   });
-  return { app: "lianjiu", version: 2, exportedAt: new Date().toISOString(), data };
+  return { app: "lianjiu", version: 3, exportedAt: new Date().toISOString(), data };
 }
 
 export function parseBackup(text) {
@@ -71,22 +74,27 @@ export function parseBackup(text) {
   try { backup = JSON.parse(text); }
   catch { throw new Error("文件不是有效的 JSON，当前记录未修改。"); }
   requireValue(object(backup) && backup.app === "lianjiu");
-  if (![1, 2].includes(backup.version)) throw new Error("暂不支持此备份版本，当前记录未修改。");
+  if (![1, 2, 3].includes(backup.version)) throw new Error("暂不支持此备份版本，当前记录未修改。");
   requireValue(typeof backup.exportedAt === "string" && !Number.isNaN(Date.parse(backup.exportedAt)));
-  if (backup.version === 2) requireValue(object(backup.data) && owns(backup.data, "notes"));
+  if (backup.version >= 2) requireValue(object(backup.data) && owns(backup.data, "notes"));
+  if (backup.version === 3) requireValue(object(backup.data) && owns(backup.data, "todos"));
   const data = validateData(backup.data);
   // Old exports never contained personal notes; preserve current notes on import.
   if (backup.version === 1) delete data.notes;
+  if (backup.version < 3) delete data.todos;
   return { ...backup, data };
 }
 
 export function restoreBackup(backup, storage = localStorage) {
+  if (backup.version === 3) requireValue(object(backup.data) && owns(backup.data, "todos"));
   const data = validateData(backup.data);
   const keys = [TRAINING_KEY, MASTERY_KEY];
   if (owns(data, "notes")) keys.push(NOTES_KEY);
+  if (owns(data, "todos")) keys.push(TODOS_KEY);
   const previous = keys.map((key) => storage.getItem(key));
   const values = [JSON.stringify(data.training), JSON.stringify(data.mastery)];
   if (owns(data, "notes")) values.push(JSON.stringify(data.notes));
+  if (owns(data, "todos")) values.push(JSON.stringify(data.todos));
   const written = [];
   try {
     keys.forEach((key, index) => {

@@ -4,12 +4,18 @@ import { reloadMastery } from "./composables/useMastery";
 import { useImagePreference } from "./composables/useImagePreference";
 import { reloadActionNotes } from "./composables/useActionNotes";
 import { useTraining } from "./composables/useTraining";
+import TodoView from "./components/TodoView.vue";
 import TrainingView from "./components/TrainingView.vue";
 import LibraryView from "./components/LibraryView.vue";
 import DataBackup from "./components/DataBackup.vue";
 import CelebrationModal from "./components/CelebrationModal.vue";
 const { showImages, setShowImages, imagePreferenceWarning } = useImagePreference();
-const tab = ref("today"),
+const navigation = [
+  { id: "todos", label: "代办", path: "M9 6h11M9 12h11M9 18h11M3 6h1M3 12h1M3 18h1" },
+  { id: "today", label: "今日训练", path: "M5 12h14M7 6v12M3 9v6M17 6v12M21 9v6" },
+  { id: "library", label: "全部动作", path: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" },
+];
+const tab = ref("todos"),
   training = useTraining(),
   libraryVersion = ref(0);
 function restored() {
@@ -26,24 +32,12 @@ function navigate(value) {
 <template>
   <div class="app-shell">
     <header class="app-header">
-      <a class="brand" href="#" @click.prevent="navigate('today')"
+      <a class="brand" href="#" @click.prevent="navigate('todos')"
         ><span class="brand-symbol">↗</span
         ><strong>练就<span> LIANJIU</span></strong></a
       >
       <nav class="desktop-nav" aria-label="主导航">
-        <button
-          :class="{ active: tab === 'today' }"
-          :aria-current="tab === 'today' ? 'page' : undefined"
-          @click="navigate('today')"
-        >
-          今日训练</button
-        ><button
-          :class="{ active: tab === 'library' }"
-          :aria-current="tab === 'library' ? 'page' : undefined"
-          @click="navigate('library')"
-        >
-          全部数据
-        </button>
+        <button v-for="entry in navigation" :key="entry.id" :class="{ active: tab === entry.id }" :aria-current="tab === entry.id ? 'page' : undefined" @click="navigate(entry.id)">{{ entry.label }}</button>
       </nav>
       <label class="image-visibility">
         <span>显示图片</span>
@@ -60,7 +54,8 @@ function navigate(value) {
       >
         {{ training.storageWarning.value }}
       </div>
-      <TrainingView v-if="tab === 'today'" :key="libraryVersion" :training="training" /><LibraryView
+      <TodoView v-if="tab === 'todos'" :key="libraryVersion" />
+      <TrainingView v-else-if="tab === 'today'" :key="libraryVersion" :training="training" /><LibraryView
         v-else :key="libraryVersion"
       />
       <DataBackup @restored="restored" />
@@ -70,35 +65,8 @@ function navigate(value) {
       ><span>记录保存在当前浏览器</span>
     </footer>
     <nav class="bottom-nav" aria-label="手机主导航">
-      <button
-        :class="{ active: tab === 'today' }"
-        :aria-current="tab === 'today' ? 'page' : undefined"
-        @click="navigate('today')"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-        >
-          <path d="M5 12h14M7 6v12M3 9v6M17 6v12M21 9v6" /></svg
-        >今日训练</button
-      ><button
-        :class="{ active: tab === 'library' }"
-        :aria-current="tab === 'library' ? 'page' : undefined"
-        @click="navigate('library')"
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-        >
-          <rect x="4" y="4" width="6" height="6" rx="1" />
-          <rect x="14" y="4" width="6" height="6" rx="1" />
-          <rect x="4" y="14" width="6" height="6" rx="1" />
-          <rect x="14" y="14" width="6" height="6" rx="1" /></svg
-        >全部数据
+      <button v-for="entry in navigation" :key="entry.id" :class="{ active: tab === entry.id }" :aria-current="tab === entry.id ? 'page' : undefined" @click="navigate(entry.id)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path :d="entry.path" /></svg>{{ entry.label }}
       </button>
     </nav>
     <CelebrationModal
