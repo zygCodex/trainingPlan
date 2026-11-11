@@ -17,7 +17,7 @@ const imageStyle = computed(() => {
   <div class="action-illustration" :class="{ compact }" :style="frameStyle">
     <img
       :src="source"
-      :alt="compact ? '' : `${illustration.label} · 用户提供的动作插画`"
+      :alt="compact ? '' : `${illustration.label} · ${illustration.sourceKind === 'ai' ? 'AI 生成动作示意图' : '用户提供的动作插画'}`"
       :aria-hidden="compact ? 'true' : undefined"
       :style="imageStyle"
       loading="lazy"

@@ -310,5 +310,318 @@
     ],
     "label": "跪姿滑轮卷腹",
     "source": "用户提供的四分化合集插画"
+  },
+  "W001": {
+    "src": "images/action-sheets/ai-warmups.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      4,
+      4,
+      504,
+      504
+    ],
+    "label": "弹力带水平开合与环绕",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "W002": {
+    "src": "images/action-sheets/ai-warmups.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      516,
+      4,
+      504,
+      504
+    ],
+    "label": "折刀式俯卧撑／脚抬高推起",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "W003": {
+    "src": "images/action-sheets/ai-warmups.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      1028,
+      4,
+      504,
+      504
+    ],
+    "label": "跪姿肘屈伸",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai",
+    "note": "原文未展开起始姿势，图示采用跪姿肘伸展位置，具体方式待核对。"
+  },
+  "W007": {
+    "src": "images/action-sheets/ai-warmups.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      516,
+      516,
+      504,
+      504
+    ],
+    "label": "俯卧斜凳 Y 抬与前后推",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E014": {
+    "src": "images/action-sheets/ai-warmups.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      1028,
+      516,
+      504,
+      504
+    ],
+    "label": "哥本哈根支撑",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "W005": {
+    "src": "images/action-sheets/ai-legs.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      4,
+      4,
+      504,
+      504
+    ],
+    "label": "伟大者伸展",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai",
+    "note": "起始姿势采用常见伟大者伸展版本，原文仅明确胸椎旋转提示。"
+  },
+  "W006": {
+    "src": "images/action-sheets/ai-legs.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      516,
+      4,
+      504,
+      504
+    ],
+    "label": "髋内收肌主动对抗牵拉",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai",
+    "note": "图示采用半跪侧伸腿位置，原文未展开起始姿势。"
+  },
+  "E016": {
+    "src": "images/action-sheets/ai-legs.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      4,
+      516,
+      504,
+      504
+    ],
+    "label": "后撤式弓步蹲（后腿发力提示）",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E017": {
+    "src": "images/action-sheets/ai-legs.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      516,
+      516,
+      504,
+      504
+    ],
+    "label": "负重旋转弓步蹲",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E008": {
+    "src": "images/action-sheets/ai-legs.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      1028,
+      516,
+      504,
+      504
+    ],
+    "label": "引体向上（屈髋位）",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E001": {
+    "src": "images/action-sheets/ai-upper.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      4,
+      4,
+      504,
+      504
+    ],
+    "label": "龙门架绳索夹胸",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E002": {
+    "src": "images/action-sheets/ai-upper.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      516,
+      4,
+      504,
+      504
+    ],
+    "label": "平板杠铃卧推",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E011": {
+    "src": "images/action-sheets/ai-upper.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      1028,
+      4,
+      504,
+      504
+    ],
+    "label": "窄握杠铃弯举",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E025": {
+    "src": "images/action-sheets/ai-upper.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      4,
+      516,
+      504,
+      504
+    ],
+    "label": "窄握绳索弯举",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E021": {
+    "src": "images/action-sheets/ai-upper.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      516,
+      516,
+      480,
+      504
+    ],
+    "label": "哑铃对握前平举",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E020": {
+    "src": "images/action-sheets/ai-upper.webp",
+    "sheetWidth": 1536,
+    "sheetHeight": 1024,
+    "region": [
+      1028,
+      516,
+      504,
+      504
+    ],
+    "label": "仰卧绳索面拉",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E009": {
+    "src": "images/action-sheets/ai-rows.webp",
+    "sheetWidth": 1254,
+    "sheetHeight": 1254,
+    "region": [
+      631,
+      4,
+      619,
+      619
+    ],
+    "label": "窄握坐姿划船",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E010": {
+    "src": "images/action-sheets/ai-rows.webp",
+    "sheetWidth": 1254,
+    "sheetHeight": 1254,
+    "region": [
+      4,
+      631,
+      619,
+      619
+    ],
+    "label": "45°对握／斜握高位下拉",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E007": {
+    "src": "images/action-sheets/ai-corrections.webp",
+    "sheetWidth": 1254,
+    "sheetHeight": 1254,
+    "region": [
+      4,
+      4,
+      619,
+      619
+    ],
+    "label": "上斜凳单手支撑哑铃划船",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
+  },
+  "E023": {
+    "src": "images/action-sheets/ai-corrections.webp",
+    "sheetWidth": 1254,
+    "sheetHeight": 1254,
+    "region": [
+      631,
+      4,
+      619,
+      619
+    ],
+    "label": "上斜凳单手支撑器械划船",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai",
+    "note": "滑轮与训练凳的位置仅为示意，原文未说明具体器械设置。"
+  },
+  "E012": {
+    "src": "images/action-sheets/ai-corrections.webp",
+    "sheetWidth": 1254,
+    "sheetHeight": 1254,
+    "region": [
+      4,
+      631,
+      619,
+      619
+    ],
+    "label": "仰卧髋内收",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai",
+    "note": "仅示意仰卧时双腿向中线靠拢；原文未说明阻力器械。"
+  },
+  "W004": {
+    "src": "images/action-sheets/ai-corrections.webp",
+    "sheetWidth": 1254,
+    "sheetHeight": 1254,
+    "region": [
+      631,
+      631,
+      619,
+      619
+    ],
+    "label": "墙面肘部对抗拉伸",
+    "source": "AI 生成，参考用户提供的漫画风合集",
+    "sourceKind": "ai"
   }
 }

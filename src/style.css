@@ -1340,3 +1340,5 @@ main {
   .action-illustration.compact { width: 56px; flex-basis: 56px; }
   .library-card > summary { gap: 8px; padding: 16px; }
 }
+
+.illustration-note { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 6px 0 0; }

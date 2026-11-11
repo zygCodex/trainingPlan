@@ -10,7 +10,21 @@
       "notes": "",
       "source": "合并胸日与肩日的同类弹力带热身。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-warmups.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          4,
+          4,
+          504,
+          504
+        ],
+        "label": "弹力带水平开合与环绕",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "W002",
@@ -22,7 +36,21 @@
       "notes": "",
       "source": "原文以两个名称并列描述，具体支撑方式未进一步展开。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-warmups.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          516,
+          4,
+          504,
+          504
+        ],
+        "label": "折刀式俯卧撑／脚抬高推起",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "W003",
@@ -34,7 +62,22 @@
       "notes": "",
       "source": "原文背日专属热身。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-warmups.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          1028,
+          4,
+          504,
+          504
+        ],
+        "label": "跪姿肘屈伸",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai",
+        "note": "原文未展开起始姿势，图示采用跪姿肘伸展位置，具体方式待核对。"
+      }
     },
     {
       "id": "W004",
@@ -46,7 +89,21 @@
       "notes": "",
       "source": "原文强调肩胛前引与张力感知。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-corrections.webp",
+        "sheetWidth": 1254,
+        "sheetHeight": 1254,
+        "region": [
+          631,
+          631,
+          619,
+          619
+        ],
+        "label": "墙面肘部对抗拉伸",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "W005",
@@ -58,7 +115,22 @@
       "notes": "",
       "source": "原文未完整描述起始姿势。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-legs.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          4,
+          4,
+          504,
+          504
+        ],
+        "label": "伟大者伸展",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai",
+        "note": "起始姿势采用常见伟大者伸展版本，原文仅明确胸椎旋转提示。"
+      }
     },
     {
       "id": "W006",
@@ -70,7 +142,22 @@
       "notes": "",
       "source": "原文未完整描述起始姿势。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-legs.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          516,
+          4,
+          504,
+          504
+        ],
+        "label": "髋内收肌主动对抗牵拉",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai",
+        "note": "图示采用半跪侧伸腿位置，原文未展开起始姿势。"
+      }
     },
     {
       "id": "W007",
@@ -82,7 +169,21 @@
       "notes": "",
       "source": "原文将 Y 抬与前后推作为一条热身组合描述。",
       "equipment": "—",
-      "alternatives": []
+      "alternatives": [],
+      "illustration": {
+        "src": "images/action-sheets/ai-warmups.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          516,
+          516,
+          504,
+          504
+        ],
+        "label": "俯卧斜凳 Y 抬与前后推",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     }
   ],
   "exercises": [
@@ -95,7 +196,21 @@
       "instructions": "站在滑轮垂直位置略偏内侧，不站得过于靠前；保持挺胸，双手沿弧线夹向腹股沟方向；下放时维持胸廓姿态，不含胸。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 1。"
+      "source": "Day 1。",
+      "illustration": {
+        "src": "images/action-sheets/ai-upper.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          4,
+          4,
+          504,
+          504
+        ],
+        "label": "龙门架绳索夹胸",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E002",
@@ -106,7 +221,21 @@
       "instructions": "下放到底时小臂垂直地面；原文描述出架后杠铃位于眼鼻中线上方，再下落触胸；肘向躯干微收，大臂约45°～60°；全握杠铃，注意虎口侧抓握；臀部贴凳，避免极端起桥；不适时不盲目追求行程。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 1。原文按肋骨开角讨论收肋／自然开肋，并提出左倾时的单腿抬起纠正建议；均属个体化提示，未作为默认执行步骤。"
+      "source": "Day 1。原文按肋骨开角讨论收肋／自然开肋，并提出左倾时的单腿抬起纠正建议；均属个体化提示，未作为默认执行步骤。",
+      "illustration": {
+        "src": "images/action-sheets/ai-upper.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          516,
+          4,
+          504,
+          504
+        ],
+        "label": "平板杠铃卧推",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E003",
@@ -215,7 +344,21 @@
         "E023"
       ],
       "notes": "",
-      "source": "Day 2。原文“器械／哑铃划船”拆为两条可选形式。"
+      "source": "Day 2。原文“器械／哑铃划船”拆为两条可选形式。",
+      "illustration": {
+        "src": "images/action-sheets/ai-corrections.webp",
+        "sheetWidth": 1254,
+        "sheetHeight": 1254,
+        "region": [
+          4,
+          4,
+          619,
+          619
+        ],
+        "label": "上斜凳单手支撑哑铃划船",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E008",
@@ -228,7 +371,21 @@
         "E024"
       ],
       "notes": "",
-      "source": "Day 2。原文允许自重或器械辅助。"
+      "source": "Day 2。原文允许自重或器械辅助。",
+      "illustration": {
+        "src": "images/action-sheets/ai-legs.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          1028,
+          516,
+          504,
+          504
+        ],
+        "label": "引体向上（屈髋位）",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E009",
@@ -239,7 +396,21 @@
       "instructions": "双腿微屈蹬实，稳定骨盆；身体微前倾、收下巴，向肚脐斜下方拉；以肩伸带动肩胛滑动，避免主动死夹背或耸肩仰头。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 2。"
+      "source": "Day 2。",
+      "illustration": {
+        "src": "images/action-sheets/ai-rows.webp",
+        "sheetWidth": 1254,
+        "sheetHeight": 1254,
+        "region": [
+          631,
+          4,
+          619,
+          619
+        ],
+        "label": "窄握坐姿划船",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E010",
@@ -250,7 +421,21 @@
       "instructions": "躯干保持中立，垂直下拉至下巴高度；臀部坐稳、腿部固定，避免后仰变成划船。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 2。两种握法按原文保留为同一动作的握法选项。"
+      "source": "Day 2。两种握法按原文保留为同一动作的握法选项。",
+      "illustration": {
+        "src": "images/action-sheets/ai-rows.webp",
+        "sheetWidth": 1254,
+        "sheetHeight": 1254,
+        "region": [
+          4,
+          631,
+          619,
+          619
+        ],
+        "label": "45°对握／斜握高位下拉",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E011",
@@ -263,7 +448,21 @@
         "E025"
       ],
       "notes": "",
-      "source": "Day 2。原文“杠铃／钢线弯举”拆开。"
+      "source": "Day 2。原文“杠铃／钢线弯举”拆开。",
+      "illustration": {
+        "src": "images/action-sheets/ai-upper.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          1028,
+          4,
+          504,
+          504
+        ],
+        "label": "窄握杠铃弯举",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E012",
@@ -277,7 +476,22 @@
         "E014"
       ],
       "notes": "",
-      "source": "Day 3 可选形式之一；原文未展开阻力设置。"
+      "source": "Day 3 可选形式之一；原文未展开阻力设置。",
+      "illustration": {
+        "src": "images/action-sheets/ai-corrections.webp",
+        "sheetWidth": 1254,
+        "sheetHeight": 1254,
+        "region": [
+          4,
+          631,
+          619,
+          619
+        ],
+        "label": "仰卧髋内收",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai",
+        "note": "仅示意仰卧时双腿向中线靠拢；原文未说明阻力器械。"
+      }
     },
     {
       "id": "E013",
@@ -318,7 +532,21 @@
         "E013"
       ],
       "notes": "",
-      "source": "Day 3 可选形式之一；原文未明确静态保持时间或动态计次方式，不能直接把15～20次换算成秒。"
+      "source": "Day 3 可选形式之一；原文未明确静态保持时间或动态计次方式，不能直接把15～20次换算成秒。",
+      "illustration": {
+        "src": "images/action-sheets/ai-warmups.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          1028,
+          516,
+          504,
+          504
+        ],
+        "label": "哥本哈根支撑",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E015",
@@ -353,7 +581,21 @@
       "instructions": "向后迈步下蹲；原文特别强调起身时后腿主动伸直发力。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 3。保留该教程特定提示，不改写为其他弓步蹲版本。"
+      "source": "Day 3。保留该教程特定提示，不改写为其他弓步蹲版本。",
+      "illustration": {
+        "src": "images/action-sheets/ai-legs.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          4,
+          516,
+          504,
+          504
+        ],
+        "label": "后撤式弓步蹲（后腿发力提示）",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E017",
@@ -364,7 +606,21 @@
       "instructions": "双手抱杠铃片；下蹲时躯干转向支撑腿一侧，回正时向斜上方推起。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 3。"
+      "source": "Day 3。",
+      "illustration": {
+        "src": "images/action-sheets/ai-legs.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          516,
+          516,
+          504,
+          504
+        ],
+        "label": "负重旋转弓步蹲",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E018",
@@ -423,7 +679,21 @@
       "instructions": "仰卧，头垫泡沫砖、下巴微收；拉向额头上方，肘向斜上方展开；采用动作中段行程维持张力。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 4。肌肉归类沿用原文表述，未独立核实。"
+      "source": "Day 4。肌肉归类沿用原文表述，未独立核实。",
+      "illustration": {
+        "src": "images/action-sheets/ai-upper.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          1028,
+          516,
+          504,
+          504
+        ],
+        "label": "仰卧绳索面拉",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E021",
@@ -434,7 +704,21 @@
       "instructions": "掌心相对；下放维持挺胸与胸廓姿态，大腿后侧发力稳定骨盆；动作连贯。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 4。"
+      "source": "Day 4。",
+      "illustration": {
+        "src": "images/action-sheets/ai-upper.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          516,
+          516,
+          480,
+          504
+        ],
+        "label": "哑铃对握前平举",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E022",
@@ -471,7 +755,22 @@
         "E007"
       ],
       "notes": "",
-      "source": "E007的原文可选形式。"
+      "source": "E007的原文可选形式。",
+      "illustration": {
+        "src": "images/action-sheets/ai-corrections.webp",
+        "sheetWidth": 1254,
+        "sheetHeight": 1254,
+        "region": [
+          631,
+          4,
+          619,
+          619
+        ],
+        "label": "上斜凳单手支撑器械划船",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai",
+        "note": "滑轮与训练凳的位置仅为示意，原文未说明具体器械设置。"
+      }
     },
     {
       "id": "E024",
@@ -510,7 +809,21 @@
         "E011"
       ],
       "notes": "",
-      "source": "原文“钢线弯举”按绳索形式整理。"
+      "source": "原文“钢线弯举”按绳索形式整理。",
+      "illustration": {
+        "src": "images/action-sheets/ai-upper.webp",
+        "sheetWidth": 1536,
+        "sheetHeight": 1024,
+        "region": [
+          4,
+          516,
+          504,
+          504
+        ],
+        "label": "窄握绳索弯举",
+        "source": "AI 生成，参考用户提供的漫画风合集",
+        "sourceKind": "ai"
+      }
     },
     {
       "id": "E026",

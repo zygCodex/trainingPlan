@@ -20,7 +20,8 @@ const alternatives = computed(() =>
   <div class="action-detail">
     <figure v-if="action.illustration" class="action-figure">
       <ActionIllustration :key="action.id" :illustration="action.illustration" />
-      <figcaption>{{ action.illustration.label }} · 动作插画参考</figcaption>
+      <figcaption>{{ action.illustration.label }} · {{ action.illustration.sourceKind === "ai" ? "AI 生成动作示意图" : "动作插画参考" }}</figcaption>
+      <p v-if="action.illustration.note" class="illustration-note">{{ action.illustration.note }}</p>
     </figure>
     <div class="detail-meta">
       <span>所属模块 <b>{{ action.module }}</b></span>
