@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from "vue";
+import ActionIllustration from "./ActionIllustration.vue";
 import { actions } from "../data";
 const props = defineProps({ action: Object, item: Object, editable: Boolean });
 defineEmits(["replace"]);
@@ -17,6 +18,10 @@ const alternatives = computed(() =>
 </script>
 <template>
   <div class="action-detail">
+    <figure v-if="action.illustration" class="action-figure">
+      <ActionIllustration :key="action.id" :illustration="action.illustration" />
+      <figcaption>{{ action.illustration.label }} · 动作插画参考</figcaption>
+    </figure>
     <div class="detail-meta">
       <span>所属模块 <b>{{ action.module }}</b></span>
       <span v-if="action.equipment !== '—'"

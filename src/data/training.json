@@ -117,7 +117,20 @@
       "instructions": "推起时主动维持背部贴靠背，抑制肋骨上翻，保持中上胸张力。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 1。"
+      "source": "Day 1。",
+      "illustration": {
+        "src": "images/action-sheets/chest.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          740,
+          300,
+          325,
+          370
+        ],
+        "label": "器械上斜卧推",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E004",
@@ -128,7 +141,20 @@
       "instructions": "原文以银环附近作为握距参考；起始杠铃位于上胸，推起时不塌腕、不后仰顶腰；胸日描述下放至鼻与嘴唇之间，慢下快推；肩日强调腹内压与核心稳定。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 1 辅助项、Day 4 主项，共用动作 ID；当天强调点见计划备注。握距参考依杠铃规格而异。"
+      "source": "Day 1 辅助项、Day 4 主项，共用动作 ID；当天强调点见计划备注。握距参考依杠铃规格而异。",
+      "illustration": {
+        "src": "images/action-sheets/chest.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          365,
+          831,
+          350,
+          362
+        ],
+        "label": "杠铃实力推",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E005",
@@ -139,7 +165,20 @@
       "instructions": "滑轮调低，手肘向内收并抬高；伸展时主动收缩三头，保持躯干稳定。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 1、Day 4 共用；肩日强调避免关节超伸锁死。"
+      "source": "Day 1、Day 4 共用；肩日强调避免关节超伸锁死。",
+      "illustration": {
+        "src": "images/action-sheets/chest.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          750,
+          832,
+          315,
+          361
+        ],
+        "label": "颈后臂屈伸",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E006",
@@ -150,7 +189,20 @@
       "instructions": "手腕微扣、肘抬起；原文强调肩胛上回旋与前引，不主动后缩夹背；下压约2/3行程，保持张力。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 2。虽有“激活”作用，原文列在正式动作中。"
+      "source": "Day 2。虽有“激活”作用，原文列在正式动作中。",
+      "illustration": {
+        "src": "images/action-sheets/back.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1350,
+        "region": [
+          95,
+          283,
+          350,
+          367
+        ],
+        "label": "站姿直臂下压",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E007",
@@ -239,7 +291,20 @@
         "E014"
       ],
       "notes": "",
-      "source": "Day 3 可选形式之一，不直接套用仰卧位的全部操作。"
+      "source": "Day 3 可选形式之一，不直接套用仰卧位的全部操作。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          20,
+          310,
+          255,
+          330
+        ],
+        "label": "坐姿内收",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E014",
@@ -264,7 +329,20 @@
       "instructions": "平视前方、不仰头；骨盆保持水平，髋向后折叠；初学者可扶立柱。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 3。原文另述屈髋位单手划船预激活技巧，未给完整剂量，不另增必做计划项。"
+      "source": "Day 3。原文另述屈髋位单手划船预激活技巧，未给完整剂量，不另增必做计划项。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          505,
+          310,
+          303,
+          330
+        ],
+        "label": "单腿哑铃硬拉",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E016",
@@ -297,7 +375,20 @@
       "instructions": "前脚掌大拇指球及脚趾抓地；下放时前掌不翘起；重心直上直下，避免前后晃动。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 3。"
+      "source": "Day 3。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          812,
+          305,
+          255,
+          335
+        ],
+        "label": "杠铃提踵",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E019",
@@ -308,7 +399,20 @@
       "instructions": "手与肩齐平或略低，手肘微抬；向外延伸拉开，离心回放不触底；胸贴靠垫，不后仰。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 4。"
+      "source": "Day 4。",
+      "illustration": {
+        "src": "images/action-sheets/shoulders.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1345,
+        "region": [
+          45,
+          280,
+          275,
+          370
+        ],
+        "label": "坐姿反向飞鸟",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E020",
@@ -341,7 +445,20 @@
       "instructions": "原文描述大臂放于膝盖，外旋收紧；避免关节超伸锁死。",
       "alternatives": [],
       "notes": "",
-      "source": "Day 4，与E005构成超级组；原文未明确具体把手。"
+      "source": "Day 4，与E005构成超级组；原文未明确具体把手。",
+      "illustration": {
+        "src": "images/action-sheets/shoulders.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1345,
+        "region": [
+          705,
+          790,
+          345,
+          357
+        ],
+        "label": "蹲姿二头弯举",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E023",
@@ -367,7 +484,20 @@
         "E008"
       ],
       "notes": "",
-      "source": "E008的原文退阶形式；不强行要求器械不支持的腿位。"
+      "source": "E008的原文退阶形式；不强行要求器械不支持的腿位。",
+      "illustration": {
+        "src": "images/action-sheets/back.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1350,
+        "region": [
+          360,
+          800,
+          315,
+          385
+        ],
+        "label": "辅助引体向上",
+        "source": "用户提供的四分化合集插画"
+      }
     },
     {
       "id": "E025",
@@ -381,6 +511,342 @@
       ],
       "notes": "",
       "source": "原文“钢线弯举”按绳索形式整理。"
+    },
+    {
+      "id": "E026",
+      "name": "史密斯推肩",
+      "module": "肩",
+      "equipment": "史密斯机；靠背凳",
+      "muscles": "肩部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/shoulders.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1345,
+        "region": [
+          380,
+          280,
+          345,
+          373
+        ],
+        "label": "史密斯推肩",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E027",
+      "name": "哑铃前平举",
+      "module": "肩",
+      "equipment": "哑铃",
+      "muscles": "肩部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/shoulders.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1345,
+        "region": [
+          780,
+          278,
+          265,
+          374
+        ],
+        "label": "哑铃前平举",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E028",
+      "name": "绳索 Y 字侧平举",
+      "module": "肩",
+      "equipment": "龙门架；单手把手",
+      "muscles": "肩部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/shoulders.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1345,
+        "region": [
+          45,
+          790,
+          285,
+          357
+        ],
+        "label": "Y字侧平举",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E029",
+      "name": "上斜杠铃臂屈伸",
+      "module": "手臂",
+      "equipment": "杠铃；上斜凳",
+      "muscles": "肱三头肌",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/shoulders.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1345,
+        "region": [
+          350,
+          790,
+          340,
+          357
+        ],
+        "label": "上斜杠铃臂屈伸",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E030",
+      "name": "坐姿器械夹胸",
+      "module": "胸",
+      "equipment": "夹胸器械",
+      "muscles": "胸部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/chest.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          15,
+          300,
+          315,
+          370
+        ],
+        "label": "坐姿器械夹胸",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E031",
+      "name": "史密斯卧推",
+      "module": "胸",
+      "equipment": "史密斯机；平板凳",
+      "muscles": "胸部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/chest.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          370,
+          300,
+          345,
+          370
+        ],
+        "label": "史密斯卧推",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E032",
+      "name": "器械下斜卧推",
+      "module": "胸",
+      "equipment": "下斜推胸器械",
+      "muscles": "胸部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/chest.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          10,
+          835,
+          335,
+          358
+        ],
+        "label": "器械下斜卧推",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E033",
+      "name": "坐姿单臂绳索划船",
+      "module": "背",
+      "equipment": "低位滑轮；单手把手",
+      "muscles": "背部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/back.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1350,
+        "region": [
+          565,
+          280,
+          440,
+          370
+        ],
+        "label": "坐姿单臂划船",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E034",
+      "name": "反手高位下拉",
+      "module": "背",
+      "equipment": "高位下拉器械；长杆",
+      "muscles": "背部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/back.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1350,
+        "region": [
+          30,
+          800,
+          305,
+          385
+        ],
+        "label": "反手高位下拉",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E035",
+      "name": "杠铃弯举",
+      "module": "手臂",
+      "equipment": "杠铃",
+      "muscles": "肱二头肌",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/back.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1350,
+        "region": [
+          725,
+          800,
+          335,
+          385
+        ],
+        "label": "杠铃弯举",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E036",
+      "name": "哑铃弓步蹲",
+      "module": "腿",
+      "equipment": "哑铃",
+      "muscles": "臀腿",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          287,
+          310,
+          215,
+          330
+        ],
+        "label": "哑铃弓步蹲",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E037",
+      "name": "下斜卷腹",
+      "module": "腹部",
+      "equipment": "下斜凳",
+      "muscles": "腹部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          15,
+          810,
+          300,
+          330
+        ],
+        "label": "下斜卷腹",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E038",
+      "name": "悬挂抬腿",
+      "module": "腹部",
+      "equipment": "单杠",
+      "muscles": "腹部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          320,
+          810,
+          205,
+          330
+        ],
+        "label": "悬挂抬腿",
+        "source": "用户提供的四分化合集插画"
+      }
+    },
+    {
+      "id": "E039",
+      "name": "跪姿滑轮卷腹",
+      "module": "腹部",
+      "equipment": "高位滑轮；绳索",
+      "muscles": "腹部",
+      "instructions": "合集仅含静态姿势，未提供完整动作步骤。",
+      "alternatives": [],
+      "notes": "图示补充动作，未编入当前每日训练计划。",
+      "source": "用户提供的四分化合集插画。",
+      "illustration": {
+        "src": "images/action-sheets/legs.webp",
+        "sheetWidth": 1080,
+        "sheetHeight": 1347,
+        "region": [
+          535,
+          810,
+          285,
+          330
+        ],
+        "label": "跪姿滑轮卷腹",
+        "source": "用户提供的四分化合集插画"
+      }
     }
   ],
   "plan": [

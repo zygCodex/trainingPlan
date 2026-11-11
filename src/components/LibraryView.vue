@@ -4,12 +4,14 @@ import { plan, warmups, exercises, actionModules } from "../data";
 import DayPicker from "./DayPicker.vue";
 import ExerciseCard from "./ExerciseCard.vue";
 import ActionDetail from "./ActionDetail.vue";
+import ActionIllustration from "./ActionIllustration.vue";
 import { useMastery, masteryLabel } from "../composables/useMastery";
 const { scores, storageWarning, setScore } = useMastery();
 const category = ref("plan"),
   libraryDay = ref(1),
   query = ref(""),
-  selectedModule = ref("");
+  selectedModule = ref(""),
+  illustratedOnly = ref(false);
 const categories = [
   { id: "plan", name: "完整计划" },
   { id: "warmups", name: "热身动作库" },
@@ -18,6 +20,7 @@ const categories = [
 const filtered = computed(() =>
   (category.value === "warmups" ? warmups : exercises).filter((a) =>
     (!selectedModule.value || a.module === selectedModule.value) &&
+    (!illustratedOnly.value || !!a.illustration) &&
     `${a.name} ${a.equipment} ${a.muscles} ${a.module}`
       .toLowerCase()
       .includes(query.value.trim().toLowerCase()),
@@ -32,7 +35,7 @@ const filtered = computed(() =>
         <h1>练之前，多了解一点<span>。</span></h1>
         <p class="muted">四分化计划与动作资料，都在这里。</p>
       </div>
-      <span class="library-count">32 <small>个动作</small></span>
+      <span class="library-count">{{ warmups.length + exercises.length }} <small>个动作</small></span>
     </div>
     <div class="category-tabs" aria-label="资料分类">
       <button
@@ -74,6 +77,9 @@ const filtered = computed(() =>
           @click="selectedModule = module"
         >{{ module || "全部模块" }}</button>
       </div>
+      <label class="illustrated-filter">
+        <input v-model="illustratedOnly" type="checkbox" /> 只看有图动作
+      </label>
       <label class="search"
         ><span>⌕</span
         ><input
@@ -100,6 +106,7 @@ const filtered = computed(() =>
                 掌握程度 · {{ scores[a.id] ? `${scores[a.id]} / 10 · ` : "" }}{{ masteryLabel(scores[a.id]) }}
               </p>
             </div>
+            <ActionIllustration v-if="a.illustration" :illustration="a.illustration" compact />
             <span class="chevron">⌄</span>
           </summary>
           <div class="mastery-field">
@@ -123,7 +130,7 @@ const filtered = computed(() =>
       </div>
       <div v-if="!filtered.length" class="empty">
         没有找到匹配的动作，试试其他模块或关键词。
-        <button class="text-button" @click="selectedModule = ''; query = ''">清除筛选与搜索</button>
+        <button class="text-button" @click="selectedModule = ''; query = ''; illustratedOnly = false">清除筛选与搜索</button>
       </div></template
     >
     <div class="source-footer">
