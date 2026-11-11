@@ -4,6 +4,8 @@ import { plan, warmups, exercises } from "../data";
 import DayPicker from "./DayPicker.vue";
 import ExerciseCard from "./ExerciseCard.vue";
 import ActionDetail from "./ActionDetail.vue";
+import { useMastery, masteryLabel } from "../composables/useMastery";
+const { scores, storageWarning, setScore } = useMastery();
 const category = ref("plan"),
   libraryDay = ref(1),
   query = ref("");
@@ -70,6 +72,8 @@ const filtered = computed(() =>
           aria-label="搜索动作"
         /><span>{{ filtered.length }} 项</span></label
       >
+      <p class="library-hint">展开动作，为自己的掌握程度打 1–10 分。评分保存在当前浏览器，可随时修改。</p>
+      <p v-if="storageWarning" class="storage-warning" role="status">{{ storageWarning }}</p>
       <div class="library-grid">
         <details v-for="a in filtered" :key="a.id" class="library-card">
           <summary>
@@ -80,9 +84,28 @@ const filtered = computed(() =>
               >
               <h3>{{ a.name }}</h3>
               <p>{{ a.muscles }}</p>
+              <p class="mastery-summary" :class="{ rated: scores[a.id] }">
+                掌握程度 · {{ scores[a.id] ? `${scores[a.id]} / 10 · ` : "" }}{{ masteryLabel(scores[a.id]) }}
+              </p>
             </div>
             <span class="chevron">⌄</span>
           </summary>
+          <div class="mastery-field">
+            <div class="mastery-heading">
+              <label :for="`mastery-${a.id}`">我的掌握程度</label>
+              <select
+                :id="`mastery-${a.id}`"
+                :value="scores[a.id] ?? ''"
+                :aria-label="`${a.name}的掌握程度`"
+                @change="setScore(a.id, $event.target.value)"
+              >
+                <option value="">尚未评分</option>
+                <option v-for="score in 10" :key="score" :value="score">{{ score }} 分</option>
+              </select>
+            </div>
+            <p class="mastery-status" role="status">{{ masteryLabel(scores[a.id]) }}</p>
+            <p class="mastery-guide">1–2 刚开始了解 · 3–4 正在熟悉 · 5–6 基本掌握 · 7–8 比较熟练 · 9–10 很有把握</p>
+          </div>
           <ActionDetail :action="a" />
         </details>
       </div>

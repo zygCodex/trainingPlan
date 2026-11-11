@@ -1176,3 +1176,54 @@ main {
     display: none;
   }
 }
+
+/* Personal mastery scores in both action libraries. */
+.library-card summary .mastery-summary {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.library-card summary .mastery-summary.rated {
+  color: var(--lime);
+}
+.mastery-field {
+  padding: 18px 20px;
+  border-top: 1px solid var(--border);
+  background: #20281b;
+}
+.mastery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.mastery-heading label {
+  font-size: 15px;
+  font-weight: 600;
+}
+.mastery-heading select {
+  font: inherit;
+  font-size: 16px;
+  color: var(--lime);
+  background: var(--surface);
+  border: 1px solid #65784a;
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  max-width: 100%;
+}
+.mastery-heading select:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 4px;
+}
+.mastery-status {
+  font-size: 15px;
+  color: var(--lime);
+  margin: 12px 0 4px;
+}
+.mastery-guide {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.9;
+}
