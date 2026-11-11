@@ -7,15 +7,16 @@ rows = [list(map(str.strip, line.split('|')[1:-1])) for line in (root / 'trainin
 warmups, exercises, plan = [], [], []
 for r in rows:
     if r[0].startswith('W'):
-        warmups.append(dict(zip(['id','name','instructions','muscles','days','notes','source'], r)) | {'equipment':'—', 'alternatives':[]})
+        warmups.append(dict(zip(['id','name','module','instructions','muscles','days','notes','source'], r)) | {'equipment':'—', 'alternatives':[]})
     elif r[0].startswith('E'):
-        item = dict(zip(['id','name','equipment','muscles','instructions','alternatives','notes','source'], r))
+        item = dict(zip(['id','name','module','equipment','muscles','instructions','alternatives','notes','source'], r))
         item['alternatives'] = [] if item['alternatives']=='—' else item['alternatives'].split('；')
         exercises.append(item)
     else:
         item = dict(zip(['id','dayLabel','order','actionId','name','stage','dose','side','superset','remark'], r))
         item['day'] = int(re.search(r'Day (\d)', item['dayLabel'])[1]); item['order'] = int(item['order'])
         plan.append(item)
+assert all(x['module'] in {'胸', '肩', '背', '腿', '手臂'} for x in warmups + exercises)
 ids = [x['id'] for x in warmups + exercises + plan]
 assert len(ids) == len(set(ids))
 actions = {x['id'] for x in warmups + exercises}

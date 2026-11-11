@@ -1227,3 +1227,35 @@ main {
   margin: 0;
   line-height: 1.9;
 }
+
+.module-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.module-filters button {
+  min-height: 44px;
+  padding: 8px 15px;
+  font-size: 15px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+.module-filters button.active {
+  color: #19200f;
+  background: var(--lime);
+  border-color: var(--lime);
+}
+.module-tag {
+  display: inline-block;
+  padding: 2px 9px;
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--lime);
+  background: #2a3720;
+  border: 1px solid #485737;
+  border-radius: 6px;
+}

@@ -18,6 +18,7 @@ const alternatives = computed(() =>
 <template>
   <div class="action-detail">
     <div class="detail-meta">
+      <span>所属模块 <b>{{ action.module }}</b></span>
       <span v-if="action.equipment !== '—'"
         >器械 <b>{{ action.equipment }}</b></span
       ><span

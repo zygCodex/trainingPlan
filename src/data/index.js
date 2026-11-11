@@ -1,5 +1,6 @@
 import data from "./training.json";
 export const { warmups, exercises, plan } = data;
+export const actionModules = ["胸", "肩", "背", "腿", "手臂"];
 export const actions = Object.fromEntries(
   [...warmups, ...exercises].map((a) => [a.id, a]),
 );

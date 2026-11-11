@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { plan, warmups, exercises } from "../data";
+import { plan, warmups, exercises, actionModules } from "../data";
 import DayPicker from "./DayPicker.vue";
 import ExerciseCard from "./ExerciseCard.vue";
 import ActionDetail from "./ActionDetail.vue";
@@ -8,7 +8,8 @@ import { useMastery, masteryLabel } from "../composables/useMastery";
 const { scores, storageWarning, setScore } = useMastery();
 const category = ref("plan"),
   libraryDay = ref(1),
-  query = ref("");
+  query = ref(""),
+  selectedModule = ref("");
 const categories = [
   { id: "plan", name: "完整计划" },
   { id: "warmups", name: "热身动作库" },
@@ -16,7 +17,8 @@ const categories = [
 ];
 const filtered = computed(() =>
   (category.value === "warmups" ? warmups : exercises).filter((a) =>
-    `${a.name} ${a.equipment} ${a.muscles}`
+    (!selectedModule.value || a.module === selectedModule.value) &&
+    `${a.name} ${a.equipment} ${a.muscles} ${a.module}`
       .toLowerCase()
       .includes(query.value.trim().toLowerCase()),
   ),
@@ -62,8 +64,17 @@ const filtered = computed(() =>
         <p class="muted">原文未提供具体动作、组次或时长。</p>
       </div></template
     >
-    <template v-else
-      ><label class="search"
+    <template v-else>
+      <div class="module-filters" role="group" aria-label="按所属模块筛选">
+        <button
+          v-for="module in ['', ...actionModules]"
+          :key="module"
+          :class="{ active: selectedModule === module }"
+          :aria-pressed="selectedModule === module"
+          @click="selectedModule = module"
+        >{{ module || "全部模块" }}</button>
+      </div>
+      <label class="search"
         ><span>⌕</span
         ><input
           v-model="query"
@@ -83,6 +94,7 @@ const filtered = computed(() =>
                 {{ category === "warmups" ? "WARM UP" : "EXERCISE" }}</span
               >
               <h3>{{ a.name }}</h3>
+              <span class="module-tag" :aria-label="`所属模块：${a.module}`">{{ a.module }}</span>
               <p>{{ a.muscles }}</p>
               <p class="mastery-summary" :class="{ rated: scores[a.id] }">
                 掌握程度 · {{ scores[a.id] ? `${scores[a.id]} / 10 · ` : "" }}{{ masteryLabel(scores[a.id]) }}
@@ -110,7 +122,8 @@ const filtered = computed(() =>
         </details>
       </div>
       <div v-if="!filtered.length" class="empty">
-        没有找到相关动作，试试换个关键词。
+        没有找到匹配的动作，试试其他模块或关键词。
+        <button class="text-button" @click="selectedModule = ''; query = ''">清除筛选与搜索</button>
       </div></template
     >
     <div class="source-footer">
