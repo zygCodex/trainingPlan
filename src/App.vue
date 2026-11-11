@@ -3,9 +3,15 @@ import { ref } from "vue";
 import { useTraining } from "./composables/useTraining";
 import TrainingView from "./components/TrainingView.vue";
 import LibraryView from "./components/LibraryView.vue";
+import DataBackup from "./components/DataBackup.vue";
 import CelebrationModal from "./components/CelebrationModal.vue";
 const tab = ref("today"),
-  training = useTraining();
+  training = useTraining(),
+  libraryVersion = ref(0);
+function restored() {
+  training.reload();
+  libraryVersion.value++;
+}
 function navigate(value) {
   tab.value = value;
   window.scrollTo({ top: 0, behavior: "instant" });
@@ -44,8 +50,9 @@ function navigate(value) {
         {{ training.storageWarning.value }}
       </div>
       <TrainingView v-if="tab === 'today'" :training="training" /><LibraryView
-        v-else
+        v-else :key="libraryVersion"
       />
+      <DataBackup @restored="restored" />
     </main>
     <footer class="app-footer">
       <span>练就 LIANJIU <i> / </i> 先质量，再重量。</span

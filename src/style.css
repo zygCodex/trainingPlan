@@ -1259,3 +1259,46 @@ main {
   border: 1px solid #485737;
   border-radius: 6px;
 }
+
+.data-backup {
+  margin: 32px 0;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.data-backup > summary {
+  cursor: pointer;
+  color: var(--lime);
+  font-weight: 600;
+  min-height: 44px;
+  align-content: center;
+}
+.backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.backup-secondary {
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid #65784a;
+  border-radius: 8px;
+  color: var(--lime);
+  font-size: 16px;
+}
+.backup-secondary:disabled { opacity: 0.6; }
+.backup-file { display: none; }
+.backup-preview {
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid #65784a;
+  border-radius: 8px;
+  background: #20281b;
+}
+.backup-preview h3 { margin: 0 0 12px; font-size: 18px; }
+.backup-preview p { margin: 8px 0; }
+.backup-message { color: var(--lime); }

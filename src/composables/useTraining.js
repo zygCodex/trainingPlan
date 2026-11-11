@@ -12,6 +12,8 @@ export function useTraining() {
   const celebration = ref(false);
   let allRecords = {};
   function load() {
+    storageWarning.value = "";
+    celebration.value = false;
     date.value = localDate();
     day.value = 1;
     records.value = {};
@@ -156,6 +158,7 @@ export function useTraining() {
     document.removeEventListener("visibilitychange", onVisible);
   });
   return {
+    reload: load,
     date,
     day,
     items,
