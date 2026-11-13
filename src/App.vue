@@ -15,7 +15,7 @@ const navigation = [
   { id: "today", label: "今日训练", path: "M5 12h14M7 6v12M3 9v6M17 6v12M21 9v6" },
   { id: "library", label: "全部动作", path: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" },
 ];
-const tab = ref("todos"),
+const tab = ref("today"),
   training = useTraining(),
   libraryVersion = ref(0);
 function restored() {
@@ -32,7 +32,7 @@ function navigate(value) {
 <template>
   <div class="app-shell">
     <header class="app-header">
-      <a class="brand" href="#" @click.prevent="navigate('todos')"
+      <a class="brand" href="#" @click.prevent="navigate('today')"
         ><span class="brand-symbol">↗</span
         ><strong>练就<span> LIANJIU</span></strong></a
       >
