@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
-import { actions } from "../data";
+import { actions, usesOriginalDose } from "../data";
 import ActionDetail from "./ActionDetail.vue";
 import ActionIllustration from "./ActionIllustration.vue";
 const props = defineProps({
@@ -14,6 +14,7 @@ const open = ref(false);
 const action = computed(
   () => actions[props.replacement || props.item.actionId],
 );
+const needsDose = computed(() => !usesOriginalDose(props.item.actionId, action.value.id));
 </script>
 <template>
   <article class="exercise-card" :class="{ done, open }">
@@ -31,8 +32,8 @@ const action = computed(
             >{{ action.name }}
             <span v-if="replacement" class="mini-tag">已替换</span></span
           ><span class="dose"
-            >{{ item.dose === "原文未说明" ? "组次／时长未说明" : item.dose
-            }}<em v-if="item.side === '每侧'">每侧</em
+            >{{ needsDose ? "替代动作 · 组次／时长需另定" : item.dose === "原文未说明" ? "组次／时长未说明" : item.dose
+            }}<em v-if="!needsDose && item.side === '每侧'">每侧</em
             ><em v-if="item.superset !== '—'">超级组 A</em></span
           ></span
         ><span class="chevron" :class="{ rotated: open }">⌄</span></button

@@ -1,5 +1,5 @@
 import { TODOS_KEY, validateTodos } from "./todos";
-import { actions, plan } from "../data";
+import { actions, plan, canReplace } from "../data";
 import { NOTES_KEY, MAX_NOTE_LENGTH } from "../composables/useActionNotes";
 
 export const TRAINING_KEY = "lianjiu.training.v1";
@@ -39,7 +39,7 @@ export function validateData(data) {
       }
       for (const [id, target] of Object.entries(record.replacements)) {
         const item = items.find((item) => item.id === id);
-        requireValue(item && actions[item.actionId].alternatives.includes(target) && target !== "E014");
+        requireValue(item && target !== item.actionId && canReplace(item.actionId, target));
         replacements[id] = target;
       }
       records[day] = { done, replacements, celebrated: record.celebrated, recovery: record.recovery };

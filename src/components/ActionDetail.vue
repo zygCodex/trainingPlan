@@ -5,20 +5,16 @@ const { scores, storageWarning, setScore } = useMastery();
 const ratingId = useId();
 import ActionNotes from "./ActionNotes.vue";
 import ActionPrescription from "./ActionPrescription.vue";
-import { actions } from "../data";
+import { actions, canReplace, usesOriginalDose } from "../data";
 const props = defineProps({ action: Object, item: Object, editable: Boolean });
 defineEmits(["replace"]);
 const original = computed(() =>
   props.item ? actions[props.item.actionId] : props.action,
 );
 const alternatives = computed(() =>
-  [
-    ...new Set([
-      ...(original.value.alternatives || []),
-      ...(props.action.alternatives || []),
-    ]),
-  ].filter((id) => id !== props.action.id && id !== original.value.id),
+  original.value.alternatives.filter((id) => id !== props.action.id),
 );
+const needsDose = computed(() => props.item && !usesOriginalDose(original.value.id, props.action.id));
 </script>
 <template>
   <div class="action-detail">
@@ -51,18 +47,32 @@ const alternatives = computed(() =>
         <li v-for="(cue, index) in action.instructions.split('；').filter(Boolean)" :key="index">{{ cue }}</li>
       </ol>
     </section>
+    <section v-if="action.supplementalInstructions" class="detail-instructions">
+      <h4>补充操作建议</h4>
+      <ol class="cues"><li v-for="(cue, index) in action.supplementalInstructions.split('；')" :key="index">{{ cue }}</li></ol>
+      <p class="small muted">按常见动作形式补充，非原教程说明。</p>
+    </section>
     <div v-if="item?.superset && item.superset !== '—'" class="callout">
-      超级组：每轮先三头、再二头，交替完成 4 轮；两动作各 4 组。
+      {{ needsDose ? "原计划按三头、二头顺序组成超级组；替换后的轮次与组数需重新确定。" : "超级组：每轮先三头、再二头，交替完成 4 轮；两动作各 4 组。" }}
     </div>
     <ActionNotes :action="action" />
-    <details v-if="alternatives.length" class="detail-alternatives" :open="editable">
+    <details v-if="alternatives.length" class="detail-alternatives" open>
       <summary>替代动作 <span>{{ alternatives.length }} 个可选</span></summary>
-      <p class="small muted">{{ editable ? "点击切换今天的动作" : "原文提供的可选形式" }}</p>
+      <p class="small muted">{{ editable ? "点击替换今天的动作；补充建议的组次与重量需按新动作另定。" : "按器械和训练目的选择，展开可查看做法与区别。" }}</p>
       <div class="alternatives">
         <div v-for="id in alternatives" :key="id">
-          <button :disabled="!editable || id === 'E014'" class="alternative" @click="$emit('replace', id)">
-            <span>{{ actions[id].name }}</span><span>{{ editable && id !== "E014" ? "替换 ↗" : "可选形式" }}</span>
-          </button>
+          <div class="alternative-heading">
+            <strong>{{ actions[id].name }}</strong>
+            <button v-if="editable" :disabled="!canReplace(original.id, id)" class="text-button" @click="$emit('replace', id)">{{ canReplace(original.id, id) ? "替换 ↗" : "仅供参考" }}</button>
+          </div>
+          <p class="small muted">{{ original.sourceAlternatives.includes(id) ? "原文可选形式" : "补充替代建议" }} · {{ actions[id].equipment }}</p>
+          <p v-if="original.alternativeNotes[id]" class="small">{{ original.alternativeNotes[id] }}</p>
+          <p v-else-if="id === 'E014' || original.id === 'E014'" class="small">动态内收与静态支撑的计量方式不同，不能直接沿用组次或把次数换成秒。</p>
+          <details class="alternative-guide">
+            <summary>查看做法与目标部位</summary>
+            <p class="small muted">{{ actions[id].muscles }}</p>
+            <ol class="cues"><li v-for="(cue, index) in (actions[id].supplementalInstructions || actions[id].instructions).split('；').filter(Boolean)" :key="index">{{ cue }}</li></ol>
+          </details>
           <p v-if="id === 'E014'" class="muted small">支撑时长与计量方式待核实，暂不直接替换。</p>
         </div>
       </div>

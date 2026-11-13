@@ -1389,6 +1389,13 @@ main {
 .detail-alternatives { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
 .detail-alternatives > summary { cursor: pointer; min-height: 36px; align-content: center; color: #dbe2d4; font-size: 14px; }
 .detail-alternatives > summary span { color: var(--muted); font-size: 12px; margin-left: 8px; }
+.alternatives > div { padding: 14px; border: 1px solid var(--border); border-radius: 12px; min-width: 0; }
+.alternative-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.alternative-heading strong { font-size: 15px; }
+.alternative-heading button { flex-shrink: 0; min-height: 44px; }
+.alternative-heading button:disabled { color: var(--muted); cursor: default; }
+.alternative-guide > summary { cursor: pointer; min-height: 44px; align-content: center; font-size: 14px; }
+.alternative-count { color: var(--lime); font-size: 13px; }
 .action-detail .source-note { padding-top: 12px; border-top: 1px solid var(--border); }
 .action-detail .source-note > summary { min-height: 36px; align-content: center; }
 .action-detail .personal-note { margin: 20px 0 0; padding: 10px 12px 14px; border-radius: 0 8px 8px 0; }

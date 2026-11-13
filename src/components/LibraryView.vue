@@ -84,7 +84,7 @@ const filtered = computed(() =>
           aria-label="搜索动作"
         /><span>{{ filtered.length }} 项</span></label
       >
-      <p class="library-hint">展开动作，为自己的掌握程度打 1–10 分。评分保存在当前浏览器，可随时修改。</p>
+      <p class="library-hint">展开动作可查看 1～2 个替代选项、器械与做法，并为掌握程度打分。补充建议已单独标明；到「今日训练」可直接替换。</p>
       <div class="library-grid">
         <details v-for="a in filtered" :key="a.id" class="library-card">
           <summary>
@@ -100,7 +100,8 @@ const filtered = computed(() =>
               <p v-for="entry in trainingForAction(a.id)" :key="entry.id" class="library-prescription">
                 {{ entry.dayLabel }} · {{ a.id === "E014" ? "支撑时长待核实" : entry.dose === "原文未说明" ? "组次／时长未说明" : entry.dose }}<span v-if="entry.side === '每侧'"> · 每侧</span>
               </p>
-              <p v-if="!trainingForAction(a.id).length" class="library-prescription">图示补充 · 组次未说明</p>
+              <p v-if="!trainingForAction(a.id).length" class="library-prescription">{{ a.supplemental ? "替代补充 · 组次需另定" : "图示补充 · 组次未说明" }}</p>
+              <p class="alternative-count">{{ a.alternatives.length }} 个替代动作</p>
               <p class="mastery-summary" :class="{ rated: scores[a.id] }">
                 掌握程度 · {{ scores[a.id] ? `${scores[a.id]} / 10 · ` : "" }}{{ masteryLabel(scores[a.id]) }}
               </p>
@@ -120,6 +121,7 @@ const filtered = computed(() =>
       <p>
         依据谭成义新手四分化教程的博客整理，未逐项核对原视频。缺失的组次与时长保留为未说明。
       </p>
+      <p>替代建议与补充操作按常见训练模式整理，非原教程内容。相近训练目的不代表完全等效，具体区别见动作详情；补充替代动作的组次与重量需另定。</p>
       <a
         href="https://smallsmartao.github.io/2026/08/30/2026-08-30-TanChengyi-Beginner-4Split-Strength-Training-Guide/"
         target="_blank"

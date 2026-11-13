@@ -1,5 +1,5 @@
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import { plan, actions } from "../data";
+import { plan, canReplace } from "../data";
 const KEY = "lianjiu.training.v1";
 export function localDate(date = new Date()) {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
@@ -40,8 +40,7 @@ export function useTraining() {
             if (value.done?.[p.id] === true) done[p.id] = true;
             const target = value.replacements?.[p.id];
             if (
-              actions[p.actionId].alternatives.includes(target) &&
-              target !== "E014"
+              target !== p.actionId && canReplace(p.actionId, target)
             )
               replacements[p.id] = target;
           }
@@ -128,12 +127,7 @@ export function useTraining() {
   }
   function replace(item, target) {
     if (!ensureDate() || !items.value.some((p) => p.id === item.id)) return;
-    if (
-      target !== item.actionId &&
-      (!actions[item.actionId].alternatives.includes(target) ||
-        target === "E014")
-    )
-      return;
+    if (!canReplace(item.actionId, target)) return;
     const r = current();
     if (
       r.done[item.id] &&

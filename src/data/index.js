@@ -1,5 +1,19 @@
 import data from "./training.json";
-export const { warmups, exercises, plan } = data;
+import supplements from "./supplemental-alternatives.json";
+export const { plan } = data;
+function withAlternatives(action) {
+  const sourceAlternatives = action.alternatives || [];
+  const suggestions = supplements.recommendations[action.id] || [];
+  return {
+    ...action,
+    sourceAlternatives,
+    supplementalInstructions: supplements.instructions[action.id],
+    alternatives: [...new Set([...sourceAlternatives, ...suggestions.map((entry) => entry.id)])],
+    alternativeNotes: Object.fromEntries(suggestions.map((entry) => [entry.id, entry.reason])),
+  };
+}
+export const warmups = [...data.warmups, ...supplements.actions.filter((action) => action.id.startsWith("W"))].map(withAlternatives);
+export const exercises = [...data.exercises, ...supplements.actions.filter((action) => action.id.startsWith("E"))].map(withAlternatives);
 export const actionModules = ["胸", "肩", "背", "腿", "手臂", "腹部"];
 export const actions = Object.fromEntries(
   [...warmups, ...exercises].map((a) => [a.id, a]),
@@ -52,8 +66,17 @@ export const days = [
   },
 ];
 
-// Keep training amounts tied to their day, including source-listed alternatives.
+export function canReplace(originalId, targetId) {
+  return Boolean(actions[originalId] && actions[targetId] && targetId !== "E014" &&
+    (originalId === targetId || actions[originalId].alternatives.includes(targetId)));
+}
+
+export function usesOriginalDose(originalId, targetId) {
+  return targetId !== "E014" && (originalId === targetId || actions[originalId].sourceAlternatives.includes(targetId));
+}
+
+// Only source-listed alternatives share the original tutorial's prescriptions.
 export function trainingForAction(id) {
-  return plan.filter((item) => item.actionId === id || actions[item.actionId].alternatives.includes(id))
+  return plan.filter((item) => item.actionId === id || actions[item.actionId].sourceAlternatives.includes(id))
     .map((item) => ({ ...item, prescription: id === "E014" ? null : item.prescription }));
 }
